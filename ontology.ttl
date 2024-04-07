@@ -1,0 +1,592 @@
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dtw: <https://w3id.org/def/dtw#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix hctl: <https://www.w3.org/2019/wot/hypermedia#> .
+@prefix mod: <https://w3id.org/mod#> .
+@prefix odrl: <http://www.w3.org/ns/odrl/2/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix spdx: <http://spdx.org/rdf/terms#> .
+@prefix td: <https://www.w3.org/2019/wot/td#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+dc:contributor a owl:AnnotationProperty .
+
+dc:created a owl:AnnotationProperty .
+
+dc:creator a owl:AnnotationProperty .
+
+dc:description a owl:AnnotationProperty .
+
+dc:license a owl:AnnotationProperty .
+
+dc:title a owl:AnnotationProperty .
+
+dcterms:accessRights a owl:DatatypeProperty ;
+    rdfs:label "access rights" .
+
+dcterms:accrualPeriodicity a owl:DatatypeProperty ;
+    rdfs:label "accrual periodicity" .
+
+dcterms:conformsTo a owl:DatatypeProperty ;
+    rdfs:label "conforms to" .
+
+dcterms:creator a owl:DatatypeProperty ;
+    rdfs:label "creator" .
+
+dcterms:description a owl:DatatypeProperty ;
+    rdfs:label "description" ;
+    rdfs:range xsd:string .
+
+dcterms:format a owl:DatatypeProperty ;
+    rdfs:label "format" .
+
+dcterms:hasPart a owl:DatatypeProperty ;
+    rdfs:label "has part" .
+
+dcterms:identifier a owl:DatatypeProperty ;
+    rdfs:label "identifier" .
+
+dcterms:identifiers a owl:DatatypeProperty ;
+    rdfs:label "identifiers" .
+
+dcterms:isReferencedBy a owl:DatatypeProperty ;
+    rdfs:label "is referenced by" .
+
+dcterms:issued a owl:DatatypeProperty ;
+    rdfs:label "issued" .
+
+dcterms:language a owl:DatatypeProperty ;
+    rdfs:label "language" .
+
+dcterms:license a owl:DatatypeProperty ;
+    rdfs:label "license" .
+
+dcterms:modified a owl:DatatypeProperty ;
+    rdfs:label "modified" .
+
+dcterms:publisher a owl:DatatypeProperty ;
+    rdfs:label "publisher" .
+
+dcterms:relation a owl:DatatypeProperty,
+        owl:ObjectProperty ;
+    rdfs:label "relation" ;
+    rdfs:domain dcat:Relationship ;
+    rdfs:range dcat:Resource .
+
+dcterms:replaces a owl:DatatypeProperty ;
+    rdfs:label "replaces" .
+
+dcterms:rights a owl:DatatypeProperty ;
+    rdfs:label "rights" .
+
+dcterms:spatial a owl:DatatypeProperty ;
+    rdfs:label "spatial" .
+
+dcterms:temporal a owl:DatatypeProperty ;
+    rdfs:label "temporal" .
+
+dcterms:title a owl:DatatypeProperty ;
+    rdfs:label "title" ;
+    rdfs:range xsd:string .
+
+dcterms:type a owl:DatatypeProperty ;
+    rdfs:label "type" .
+
+vann:preferredNamespacePrefix a owl:AnnotationProperty .
+
+vann:preferredNamespaceUri a owl:AnnotationProperty .
+
+spdx:checksum a owl:DatatypeProperty ;
+    rdfs:label "checksum" .
+
+rdfs:comment a owl:AnnotationProperty ;
+    rdfs:label "comment" .
+
+owl:versionInfo a owl:AnnotationProperty .
+
+adms:status a owl:DatatypeProperty ;
+    rdfs:label "status" .
+
+adms:versionNotes a owl:DatatypeProperty ;
+    rdfs:label "version notes" .
+
+dcat:accessService a owl:DatatypeProperty,
+        owl:ObjectProperty ;
+    rdfs:label "access service" ;
+    rdfs:domain dcat:Distribution ;
+    rdfs:range dcat:DataService .
+
+dcat:accessURL a owl:DatatypeProperty ;
+    rdfs:label "access u r l" .
+
+dcat:byteSize a owl:DatatypeProperty ;
+    rdfs:label "byte size" .
+
+dcat:catalog a owl:DatatypeProperty,
+        owl:ObjectProperty ;
+    rdfs:label "catalog" ;
+    rdfs:domain dcat:Catalog ;
+    rdfs:range dcat:Catalog .
+
+dcat:compressFormat a owl:DatatypeProperty ;
+    rdfs:label "compress format" .
+
+dcat:contactPoint a owl:DatatypeProperty ;
+    rdfs:label "contact point" .
+
+dcat:dataset a owl:DatatypeProperty,
+        owl:ObjectProperty ;
+    rdfs:label "dataset" ;
+    rdfs:domain dcat:Catalog ;
+    rdfs:range dcat:Dataset .
+
+dcat:distribution a owl:DatatypeProperty,
+        owl:ObjectProperty ;
+    rdfs:label "distribution" ;
+    rdfs:domain dcat:Dataset ;
+    rdfs:range dcat:Distribution .
+
+dcat:downloadURL a owl:DatatypeProperty ;
+    rdfs:label "download u r l" .
+
+dcat:endpointDescription a owl:DatatypeProperty ;
+    rdfs:label "endpoint description" .
+
+dcat:endpointURL a owl:DatatypeProperty ;
+    rdfs:label "endpoint u r l" .
+
+dcat:first a owl:DatatypeProperty ;
+    rdfs:label "first" .
+
+dcat:hadRole a owl:DatatypeProperty ;
+    rdfs:label "had role" .
+
+dcat:hasCurrentVersion a owl:DatatypeProperty ;
+    rdfs:label "has current version" .
+
+dcat:hasVersion a owl:DatatypeProperty ;
+    rdfs:label "has version" .
+
+dcat:inSeries a owl:DatatypeProperty,
+        owl:ObjectProperty ;
+    rdfs:label "in series" ;
+    rdfs:domain dcat:Dataset ;
+    rdfs:range dcat:DatasetSeries .
+
+dcat:keyword a owl:DatatypeProperty ;
+    rdfs:label "keyword" .
+
+dcat:landingPage a owl:DatatypeProperty ;
+    rdfs:label "landing page" .
+
+dcat:last a owl:DatatypeProperty ;
+    rdfs:label "last" .
+
+dcat:mediaType a owl:DatatypeProperty ;
+    rdfs:label "media type" .
+
+dcat:packageFormat a owl:DatatypeProperty ;
+    rdfs:label "package format" .
+
+dcat:prev a owl:DatatypeProperty ;
+    rdfs:label "prev" .
+
+dcat:previousVersion a owl:DatatypeProperty ;
+    rdfs:label "previous version" .
+
+dcat:qualifiedRelation a owl:DatatypeProperty,
+        owl:ObjectProperty ;
+    rdfs:label "qualified relation" ;
+    rdfs:domain dcat:Resource ;
+    rdfs:range dcat:Relationship .
+
+dcat:record a owl:DatatypeProperty,
+        owl:ObjectProperty ;
+    rdfs:label "record" ;
+    rdfs:domain dcat:Catalog ;
+    rdfs:range dcat:CatalogRecord .
+
+dcat:resource a owl:DatatypeProperty,
+        owl:ObjectProperty ;
+    rdfs:label "resource" ;
+    rdfs:range dcat:Resource .
+
+dcat:servesDataset a owl:DatatypeProperty,
+        owl:ObjectProperty ;
+    rdfs:label "serves dataset" ;
+    rdfs:domain dcat:DataService ;
+    rdfs:range dcat:Dataset .
+
+dcat:service a owl:DatatypeProperty,
+        owl:ObjectProperty ;
+    rdfs:label "service" ;
+    rdfs:domain dcat:Catalog ;
+    rdfs:range dcat:DataService .
+
+dcat:spatialResolutionInMeters a owl:DatatypeProperty ;
+    rdfs:label "spatial resolution in meters" .
+
+dcat:temporalResolution a owl:DatatypeProperty ;
+    rdfs:label "temporal resolution" .
+
+dcat:theme a owl:DatatypeProperty ;
+    rdfs:label "theme" .
+
+dcat:themeTaxonomy a owl:DatatypeProperty ;
+    rdfs:label "theme taxonomy" .
+
+dcat:version a owl:DatatypeProperty ;
+    rdfs:label "version" .
+
+odrl:hasPolicy a owl:DatatypeProperty ;
+    rdfs:label "has policy" .
+
+prov:qualifiedAttribution a owl:DatatypeProperty ;
+    rdfs:label "qualified attribution" .
+
+prov:wasGeneratedBy a owl:DatatypeProperty ;
+    rdfs:label "was generated by" .
+
+foaf:homepage a owl:DatatypeProperty ;
+    rdfs:label "homepage" .
+
+foaf:primaryTopic a owl:DatatypeProperty,
+        owl:ObjectProperty ;
+    rdfs:label "primary topic" ;
+    rdfs:domain dcat:CatalogRecord ;
+    rdfs:range dcat:Resource .
+
+dtw:BehavioralModel a owl:Class ;
+    rdfs:label "Behavioral Model" ;
+    rdfs:comment "Describes the behaviors and response mechanisms of the entity (e.g. state transition, performance and disturbances)"@en ;
+    rdfs:subClassOf dtw:Model .
+
+dtw:DataServiceConnection a owl:Class ;
+    rdfs:label "Data Service Connection" ;
+    rdfs:comment "Connection between dcat:Resource and td:InteractionAffordance."@en ;
+    rdfs:subClassOf dtw:Connection .
+
+dtw:GeometricModel a owl:Class ;
+    rdfs:label "Geometric Model" ;
+    rdfs:comment "Describes all the geometric parameters of the physical entity (e.g. shapes, sizes and assembly relations)."@en ;
+    rdfs:subClassOf dtw:Model .
+
+dtw:MappingModel a owl:Class ;
+    rdfs:label "Mapping Model" ;
+    rdfs:comment "Model that allows the alignment of data with the objective of obtaining harmonised data from non-harmonised data."@en ;
+    rdfs:subClassOf dtw:SemanticModel .
+
+dtw:ModelDataConnection a owl:Class ;
+    rdfs:label "Model Data Connection" ;
+    rdfs:comment "Connection between dtw:Model and dcat:Resource."@en ;
+    rdfs:subClassOf dtw:Connection .
+
+dtw:ModelServiceConnection a owl:Class ;
+    rdfs:label "Model Service Connection" ;
+    rdfs:comment "Connection between dtw:Model and td:InteractionAffordance."@en ;
+    rdfs:subClassOf dtw:Connection .
+
+dtw:OntologyModel a owl:Class ;
+    rdfs:label "Ontology Model" ;
+    rdfs:comment "Model that contains the conceptualization of the information of the digital twin. This conceptualization activity refers to the organization and structuration of the information (data, knowledge, etc.), obtained during the acquisition process, into meaningful models at the knowledge level and according to the ontology requirements specification document."@en ;
+    rdfs:subClassOf dtw:SemanticModel .
+
+dtw:PhysicalModel a owl:Class ;
+    rdfs:label "Physical Model" ;
+    rdfs:comment "Responsible for providing all the physical properties (e.g. speed and force) based on dt:GeometricModel"@en ;
+    rdfs:subClassOf dtw:Model .
+
+dtw:RulesModel a owl:Class ;
+    rdfs:label "Rules Model" ;
+    rdfs:comment "A set of rules extracted from the historical data obtained from the physical model, whose function is to provide the virtual entity with a judgment for decision making, optimization, evaluation, prediction and maintenance."@en ;
+    rdfs:subClassOf dtw:Model .
+
+dtw:ShapesModel a owl:Class ;
+    rdfs:label "Shapes Model" ;
+    rdfs:comment "Model that contains the data validation rules allowing the data to be validated."@en ;
+    rdfs:subClassOf dtw:SemanticModel .
+
+dtw:TwinConnection a owl:Class ;
+    rdfs:label "Twin Connection" ;
+    rdfs:subClassOf dtw:DigitalTwinDimension .
+
+dtw:applyModel a owl:ObjectProperty ;
+    rdfs:label "apply model" ;
+    rdfs:comment "td:InteractionAffordance uses dtw:Model to model something."@en ;
+    rdfs:domain td:InteractionAffordance ;
+    rdfs:range dtw:Model .
+
+dtw:hasData a owl:ObjectProperty ;
+    rdfs:label "has data" ;
+    rdfs:comment "Property that describes the different data that the dt:DigitalTwinData contains."@en ;
+    rdfs:range dcat:Resource .
+
+dtw:hasDigitalEntity a owl:ObjectProperty ;
+    rdfs:label "has digital entity" ;
+    rdfs:comment "Property that describes the different Digital Entities that the digital twin contains."@en .
+
+dtw:hasExtension a owl:DatatypeProperty ;
+    rdfs:label "has extension" ;
+    rdfs:comment "Extension of the model or data with which can be found."@en ;
+    rdfs:range xsd:string .
+
+dtw:instantiate a owl:ObjectProperty ;
+    rdfs:label "instantiate" ;
+    rdfs:comment "dcat:Resource instantiate dtw:Model."@en ;
+    rdfs:domain dcat:Resource ;
+    rdfs:range dtw:Model .
+
+dtw:isInternal a owl:DatatypeProperty ;
+    rdfs:label "is internal" ;
+    rdfs:comment "Boolean that indicates if the concept is inside or outside the digital twin."@en ;
+    rdfs:range xsd:boolean .
+
+dtw:represent a owl:ObjectProperty ;
+    rdfs:label "represent" ;
+    rdfs:comment "dtw:Model models dcat:Resource."@en ;
+    rdfs:domain dtw:Model ;
+    rdfs:range dcat:Resource .
+
+dtw:useDataTo a owl:ObjectProperty ;
+    rdfs:label "use data to" ;
+    rdfs:comment "td:InteractionAffordance uses dcat:Resource for a reason."@en ;
+    rdfs:domain td:InteractionAffordance ;
+    rdfs:range dcat:Resource .
+
+dtw:usedTo a owl:ObjectProperty ;
+    rdfs:label "used to" ;
+    rdfs:comment "dcat:Resource used by td:InteractionAffordance for a reason."@en ;
+    rdfs:domain dcat:Resource ;
+    rdfs:range td:InteractionAffordance .
+
+dtw:usedToModel a owl:ObjectProperty ;
+    rdfs:label "used to model" ;
+    rdfs:comment "dtw:Model used by td:InteractionAffordance to model something."@en ;
+    rdfs:domain dtw:Model ;
+    rdfs:range td:InteractionAffordance .
+
+hctl:hasTarget a owl:DatatypeProperty ;
+    rdfs:label "has target" ;
+    rdfs:range xsd:anyURI .
+
+td:ActionAffordance a owl:Class ;
+    rdfs:label "Action Affordance" ;
+    rdfs:subClassOf td:InteractionAffordance .
+
+td:EventAffordance a owl:Class ;
+    rdfs:label "Event Affordance" ;
+    rdfs:subClassOf td:InteractionAffordance .
+
+td:PropertyAffordance a owl:Class ;
+    rdfs:label "Property Affordance" ;
+    rdfs:subClassOf td:InteractionAffordance .
+
+td:hasForm a owl:DatatypeProperty ;
+    rdfs:label "has form" .
+
+td:hasUriTemplateSchema a owl:DatatypeProperty ;
+    rdfs:label "has uri template schema" .
+
+td:idempotent a owl:DatatypeProperty ;
+    rdfs:label "idempotent" ;
+    rdfs:range xsd:boolean .
+
+td:observable a owl:DatatypeProperty ;
+    rdfs:label "observable" ;
+    rdfs:range xsd:boolean .
+
+td:safe a owl:DatatypeProperty ;
+    rdfs:label "safe" ;
+    rdfs:range xsd:boolean .
+
+td:synchronous a owl:DatatypeProperty ;
+    rdfs:label "synchronous" ;
+    rdfs:range xsd:boolean .
+
+dcat:DatasetSeries a owl:Class ;
+    rdfs:label "Dataset Series" ;
+    rdfs:subClassOf dcat:Dataset .
+
+dtw: a owl:Ontology ;
+    dc:contributor "Andrea Cimmino",
+        "María Poveda Villalón",
+        "Raúl García Castro",
+        "Socorro Bernarndos" ;
+    dc:created "2024-04-01"^^xsd:date ;
+    dc:creator "Salvador González Gerpe" ;
+    dc:description "Digital Twin ontology used to define Digital Twins and Semantic Digital Twins and aggregations by dimensions using Web of Things."@en ;
+    dc:license <https://creativecommons.org/licenses/by/4.0/> ;
+    dc:title "WoTDT: The WoT Digital Twin Ontology with Aggregation extension."@en ;
+    vann:preferredNamespacePrefix "dtw" ;
+    vann:preferredNamespaceUri dtw: ;
+    owl:versionInfo "0.4.0" ;
+    mod:createdWith <https://chowlk.linkeddata.es/> .
+
+dtw:DigitalTwinAggregate a owl:Class ;
+    rdfs:label "Digital Twin Aggregate" ;
+    rdfs:comment "Describes the aggregation of all the DTIs. Unlike the DTI, the DTA may not be an independent data structure. It may be a computing construct that has access to all DTIs and queries them either ad-hoc or proactively."@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:minCardinality "2"^^xsd:nonNegativeInteger ;
+            owl:onProperty dtw:aggregate ],
+        dtw:DigitalTwin .
+
+dtw:DigitalTwinInstance a owl:Class ;
+    rdfs:label "Digital Twin Instance" ;
+    rdfs:comment "Describes a specific corresponding physical product that an individual Digital Twin remains linked to throughout the life of that physical product."@en ;
+    rdfs:subClassOf dtw:DigitalTwin .
+
+dtw:Entity a owl:Class ;
+    rdfs:label "Entity" ;
+    rdfs:comment "This dimension of the digital twin consists of various subsystems, objects and sensory devices. These subsystems can include dynamic systems, control systems, maintenance systems, etc., and can be combined for a specific task. Also, non physical entities can be represented."@en ;
+    rdfs:subClassOf dtw:DigitalTwinDimension .
+
+dtw:Format a owl:Class ;
+    rdfs:label "Format" ;
+    rdfs:comment "Extension format in which the model or data is available."@en .
+
+dtw:aggregate a owl:ObjectProperty ;
+    rdfs:label "aggregate" ;
+    rdfs:comment "Property that describes de action of aggregation between two different entities or dtw:DigitalTwin."@en ;
+    rdfs:domain dtw:DigitalTwinAggregate ;
+    rdfs:range dtw:DigitalTwinInstance .
+
+dtw:containsInteractionAffordance a owl:ObjectProperty ;
+    rdfs:label "contains interaction affordance" ;
+    rdfs:comment "Property that describes the different interaction affordances that the dt:DigitalTwinServices contains."@en ;
+    rdfs:domain dtw:DigitalEntity ;
+    rdfs:range td:InteractionAffordance .
+
+dtw:hasConnection a owl:ObjectProperty ;
+    rdfs:label "has connection" ;
+    rdfs:comment "Property that describes the different connections of the dtw:DigitalTwin."@en ;
+    rdfs:domain dtw:DigitalTwin ;
+    rdfs:range dtw:Connection .
+
+dtw:hasConsumer a owl:ObjectProperty ;
+    rdfs:label "has consumer" ;
+    rdfs:comment "Property that describes if the connection point is the consumer of the information."@en ;
+    rdfs:domain dtw:Connection ;
+    rdfs:range dtw:ConnectionPoint .
+
+dtw:hasDigitalTwinData a owl:ObjectProperty ;
+    rdfs:label "has digital twin data" ;
+    rdfs:domain dtw:DigitalTwin ;
+    rdfs:range dtw:DigitalEntity .
+
+dtw:hasEntity a owl:ObjectProperty ;
+    rdfs:label "has entity" ;
+    rdfs:comment "Property that describes the Entity that the digital twin describes."@en ;
+    rdfs:domain dtw:DigitalTwin ;
+    rdfs:range dtw:Entity .
+
+dtw:hasFormat a owl:ObjectProperty ;
+    rdfs:label "has format" ;
+    rdfs:comment "Property that describes the different extension formats that the models or data can be found."@en ;
+    rdfs:domain dtw:Model ;
+    rdfs:range dtw:Format .
+
+dtw:hasModel a owl:ObjectProperty ;
+    rdfs:label "has model" ;
+    rdfs:comment "Property that describes the different models that the dtw:DigitalEntity contains."@en ;
+    rdfs:domain dtw:DigitalEntity ;
+    rdfs:range dtw:Model .
+
+dtw:hasProvider a owl:ObjectProperty ;
+    rdfs:label "has provider" ;
+    rdfs:comment "Property that describes if the connection point is the provider of the information."@en ;
+    rdfs:domain dtw:Connection ;
+    rdfs:range dtw:ConnectionPoint .
+
+td:Thing a owl:Class ;
+    rdfs:label "Thing" .
+
+dcat:CatalogRecord a owl:Class ;
+    rdfs:label "Catalog Record" .
+
+dcat:Distribution a owl:Class ;
+    rdfs:label "Distribution" .
+
+dcat:Relationship a owl:Class ;
+    rdfs:label "Relationship" .
+
+dcat:DataService a owl:Class ;
+    rdfs:label "Data Service" ;
+    rdfs:subClassOf dcat:Resource .
+
+dtw:DigitalEntity a owl:Class ;
+    rdfs:label "Digital Entity" ;
+    rdfs:comment "This dimension of the digital twin consists of various data models that represents all the information allocated in the digital twin."@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty dtw:hasModel ],
+        [ a owl:Restriction ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty dtw:containsInteractionAffordance ],
+        dtw:DigitalTwinDimension .
+
+dtw:DigitalTwinDimension a owl:Class ;
+    rdfs:label "Digital Twin Dimension" ;
+    rdfs:comment "Dimensions of which the digital twin is composed."@en .
+
+dtw:SemanticModel a owl:Class ;
+    rdfs:label "Semantic Model" ;
+    rdfs:subClassOf dtw:Model .
+
+dcat:Catalog a owl:Class ;
+    rdfs:label "Catalog" ;
+    rdfs:subClassOf dcat:Dataset .
+
+dtw:ConnectionPoint a owl:Class ;
+    rdfs:label "Connection Point" ;
+    rdfs:comment "Connection point of the connection."@en .
+
+dtw:DigitalTwin a owl:Class ;
+    rdfs:label "Digital Twin" ;
+    rdfs:comment "A realistic representation of all product life cycle components using physical, virtual and interaction data."@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty dtw:hasEntity ],
+        [ a owl:Restriction ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty dtw:hasDigitalTwinData ],
+        [ a owl:Restriction ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty dtw:hasConnection ],
+        td:Thing .
+
+dcat:Dataset a owl:Class ;
+    rdfs:label "Dataset" ;
+    rdfs:subClassOf dcat:Resource .
+
+dtw:Connection a owl:Class ;
+    rdfs:label "Connection" ;
+    rdfs:comment "Existing connection between different dtw:ConnectionPoint."@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty dtw:hasProvider ],
+        [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty dtw:hasConsumer ] .
+
+td:InteractionAffordance a owl:Class ;
+    rdfs:label "Interaction Affordance" ;
+    rdfs:subClassOf dtw:ConnectionPoint .
+
+dcat:Resource a owl:Class ;
+    rdfs:label "Resource" ;
+    rdfs:subClassOf dtw:ConnectionPoint .
+
+dtw:Model a owl:Class ;
+    rdfs:label "Model" ;
+    rdfs:comment "Representation or conceptualization of the data registered in the Virtual Entity dimension."@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty dtw:hasFormat ],
+        dtw:ConnectionPoint .
+
