@@ -1,0 +1,16 @@
+ID;Competency Question/Statement;Possible Answer;Test
+WOTDT-1;A Digital Twin is a td:Thing.;;DigitalTwin subClassOf td#:Thing
+WOTDT-2;A Digital Twin contains 5 dimensions.;;DigitalTwin hasPhysicalEntities PhysicalEntity, DigitalTwin hasDigitalTwinData DigitalTwinData, DigitalTwin hasVirtualEntitiesVirtualEntity, DigitalTwin hasDigitalTwinServices DigitalTwinService, DigitalTwin hasDigitalTwinConnections DigitalTwinConnection
+WOTDT-3;Physical Entity is a dimension that represents the real world asset of the Digital Twin.;;DigitalTwin hasPhysicalEntities PhysicalEntity
+WOTDT-4;Virtual Entity is a dimension that represents the different models used in the Digital Twin.;;DigitalTwin hasVirtualEntities VirtualEntity
+WOTDT-5;Digital Twin Data is a dimension where are stored all the data used in the Digital Twin.;;DigitalTwin hasDigitalTwinData DigitalTwinData
+WOTDT-6;Digital Twin Services is a dimension where all the services of the Digital Twin are allocated.;;DigitalTwin hasDigitalTwinServices DigitalTwinService
+WOTDT-7;Digital Twin Connection is a dimension where all the connections between other dimensions in the Digital Twin are described.;;DigitalTwin hasDigitalTwinConnections DigitalTwinConnection
+WOTDT-8;Physical Entity dimension can have components.;;PhysicalEntity hasComponents Component
+WOTDT-9;Which kind of components can be described in the Physical Entity dimension?;The component can be from the physical asset that the Digital Twin is modelling, to the different devices like sensors or actuators that read or act over the specific physical asset.;Device subClassOf Component
+WOTDT-10;Virtual Entity dimension can have models.;;VirtualEntity hasModels Model
+WOTDT-11;Which kind of models can be described in the Virtual Entity dimension?;The models can be from rules, behavioral, physical and geometric models to semantic models like ontologies.;SemanticModel subClassOf Model, RulesModel subClassOf Model, GeometricModel subClassOf Model, BehavioralModel subClassOf Model, PhysicalModel subClassOf Model
+WOTDT-12;Digital Twin Data dimension can have resources that can be used to represent the different type of data stored at the Digital Twin.;;DigitalTwinData hasData Resource
+WOTDT-13;Digital Twin Service dimension can have Interaction Affordances from the WoT Thing Descriptions ontology to represent the different services used at the Digital Twin.;;DigitalTwinService hasInteractionAffordance InteractionAffordance
+WOTDT-14;Digital Twin Connection dimension can have different connections.;;DigitalTwinConnection hasConnections Connection
+WOTDT-15;Which type of connections the Digital Twin Connection dimension can describe?;The connections defined in the Digital Twin Connection dimension are the described with the different existing elements of other dimensions of the Digital Twin such as models, resources and interaction affordances, and the connections with external Things such as other Digital Twins.;InteractionAffordance subClassOf ConnectionPoint Model subClassOf ConnectionPoint, Resource subClassOf ConnectionPoint
