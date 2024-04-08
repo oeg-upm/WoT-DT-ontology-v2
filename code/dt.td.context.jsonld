@@ -1,0 +1,195 @@
+{
+    "dt" : "https://w3id.org/def/digitaltwin#",
+    "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "owl" : "http://www.w3.org/2002/07/owl#",
+    "xsd" : "http://www.w3.org/2001/XMLSchema#",
+    "dcterms" : "http://purl.org/dc/terms/",
+    "saref" : "https://w3id.org/saref#",
+    "hctl" : "https://www.w3.org/2019/wot/hypermedia#",
+    "td" : "https://www.w3.org/2019/wot/td#",
+    "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
+    "dcat" : "http://www.w3.org/ns/dcat#",
+    "pe" : {
+        "@id" : "dt:hasPhysicalEntity",
+        "@type" : "@id",
+        "@container" : "@list"
+    },
+    "PhysicalEntity" : {
+        "@id" : "dt:PhysicalEntity",
+        "@type" : "@id"
+    },
+    "Component" : {
+        "@id" : "dt:Component",
+        "@type" : "@id"
+    },
+    "MainComponent" : {
+        "@id" : "dt:MainComponent",
+        "@type" : "@id"
+    },
+    "components" : {
+        "@id" : "dt:hasComponent",
+        "@type" : "@id",
+        "@container" : "@list"
+    },
+    "title" : {
+        "@id" : "dcterms:title",
+        "@type" : "xsd:string"
+    },
+    "description" : {
+        "@id" : "dcterms:description",
+        "@type" : "xsd:string"
+    },
+    "Sensor" : {
+        "@id" : "saref:Sensor",
+        "@type" : "@id"
+    },
+    "Actuator" : {
+        "@id" : "saref:Actuator",
+        "@type" : "@id"
+    },
+    "ve" : {
+        "@id" : "dt:hasVirtualEntity",
+        "@type" : "@id"
+    },
+    "VirtualEntity" : {
+        "@id" : "dt:VirtualEntity",
+        "@type" : "@id"
+    },
+    "Model" : {
+        "@id" : "dt:Model",
+        "@type" : "@id"
+    },
+    "Ontology_Model" : {
+        "@id" : "dt:OntologyModel",
+        "@type" : "@id"
+    },
+    "SHACL_Shape_Model" : {
+        "@id" : "dt:SHACLModel",
+        "@type" : "@id"
+    },
+    "Mapping_Model" : {
+        "@id" : "dt:MappingModel",
+        "@type" : "@id"
+    },
+    "Rules_Model" : {
+        "@id" : "dt:RulesModel",
+        "@type" : "@id"
+    },
+    "Behavioral_Model" : {
+        "@id" : "dt:BehavioralModel",
+        "@type" : "@id"
+    },
+    "Physical_Model" : {
+        "@id" : "dt:PhysicalModel",
+        "@type" : "@id"
+    },
+    "Geometric_Model" : {
+        "@id" : "dt:GeometricModel",
+        "@type" : "@id"
+    },
+    "Semantic_Model" : {
+        "@id" : "dt:SemanticModel",
+        "@type" : "@id"
+    },
+    "Format" : {
+        "@id" : "dt:Format",
+        "@type" : "@id"
+    },
+    "href" : {
+        "@id" : "hctl:hasTarget",
+        "@type" : "xsd:anyURI"
+    },
+    "models" : {
+        "@id" : "dt:hasModel",
+        "@type" : "@id",
+        "@container" : "@list"
+    },
+    "aggregate" : {
+        "@id" : "dt:aggregate",
+        "@type" : "@id",
+        "@container" : "@list"
+    },
+    "formats" : {
+        "@id" : "dt:hasFormat",
+        "@type" : "@id",
+        "@container" : "@list"
+    },
+    "extension" : {
+        "@id" : "dt:hasExtension",
+        "@type" : "@id"
+    },
+    "dd" : {
+        "@id" : "dt:hasDigitalTwinData",
+        "@type" : "@id"
+    },
+    "Digital_Twin_Data" : {
+        "@id" : "dt:Digital_Twin_Data",
+        "@type" : "@id"
+    },
+    "Resource" : {
+        "@id" : "dcat:Resource",
+        "@type" : "@id"
+    },
+    "data" : {
+        "@id" : "dt:hasData",
+        "@type" : "@id",
+        "@container" : "@list"
+    },
+    "internal" : {
+        "@id" : "dt:isInternal",
+        "@type" : "xsd:boolean"
+    },
+    "cn" : {
+        "@id" : "dt:hasDigitalTwinConnection",
+        "@type" : "@id"
+    },
+    "Digital_Twin_Connection" : {
+        "@id" : "dt:DigitalTwinConnection",
+        "@type" : "@id"
+    },
+    "Digital_Twin_Service" : {
+        "@id" : "dt:DigitalTwinService",
+        "@type" : "@id"
+    },
+    "DT" : {
+        "@id" : "dt:DigitalTwin",
+        "@type" : "@id"
+    },
+    "Digital_Twin_Instance" : {
+        "@id" : "dt:DigitalTwinInstance",
+        "@type" : "@id"
+    },
+    "Aggregated_Digital_Twin" : {
+        "@id" : "dt:AggregatedDigitalTwin",
+        "@type" : "@id"
+    },
+    "connections" : {
+        "@id" : "dt:hasConnection",
+        "@type" : "@id",
+        "@container" : "@list"
+    },
+    "provider" : {
+        "@id" : "dt:isProvider",
+        "@type" : "xsd:boolean"
+    },
+    "Connection_Point" : {
+        "@id" : "dt:ConnectionPoint",
+        "@type" : "@id"
+    },
+    "Connection" : {
+        "@id" : "dt:Connection",
+        "@type" : "@id"
+    },
+    "cnp" : {
+        "@id" : "dt:hasConnectionPoint",
+        "@type" : "@id",
+        "@container" : "@list",
+        "minCount" : 2,
+        "maxCount" : 2
+    },
+    "int_affs" : {
+        "@id" : "dt:hasInteractionAffordance",
+        "@type" : "@id",
+        "@container" : "@list"
+    }
+}
