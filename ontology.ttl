@@ -272,10 +272,20 @@ dtw:DataServiceConnection a owl:Class ;
     rdfs:comment "Connection between dcat:Resource and td:InteractionAffordance."@en ;
     rdfs:subClassOf dtw:Connection .
 
+dtw:ExternalConnectionPoint a owl:Class ;
+    rdfs:label "External Connection Point" ;
+    rdfs:comment "Connection point of the connection that is external to the DTw."@en ;
+    rdfs:subClassOf dtw:ConnectionPoint .
+
 dtw:GeometricModel a owl:Class ;
     rdfs:label "Geometric Model" ;
     rdfs:comment "Describes all the geometric parameters of the physical entity (e.g. shapes, sizes and assembly relations)."@en ;
     rdfs:subClassOf dtw:Model .
+
+dtw:InternalConnectionPoint a owl:Class ;
+    rdfs:label "Internal Connection Point" ;
+    rdfs:comment "Connection point of the connection that is internal to the DTw."@en ;
+    rdfs:subClassOf dtw:ConnectionPoint .
 
 dtw:MappingModel a owl:Class ;
     rdfs:label "Mapping Model" ;
@@ -285,6 +295,10 @@ dtw:MappingModel a owl:Class ;
 dtw:ModelDataConnection a owl:Class ;
     rdfs:label "Model Data Connection" ;
     rdfs:comment "Connection between dtw:Model and dcat:Resource."@en ;
+    rdfs:subClassOf dtw:Connection .
+
+dtw:ModelModelConnection a owl:Class ;
+    rdfs:label "Model Model Connection" ;
     rdfs:subClassOf dtw:Connection .
 
 dtw:ModelServiceConnection a owl:Class ;
@@ -316,6 +330,18 @@ dtw:TwinConnection a owl:Class ;
     rdfs:label "Twin Connection" ;
     rdfs:subClassOf dtw:DigitalTwinDimension .
 
+dtw:aggregateDTwA a owl:ObjectProperty ;
+    rdfs:label "aggregate d tw a" ;
+    rdfs:comment "Property that describes de action of aggregation between two different entities or dtw:DigitalTwinAggregate."@en ;
+    rdfs:domain dtw:DigitalTwinAggregate ;
+    rdfs:range dtw:DigitalTwinAggregate .
+
+dtw:aggregateDTwI a owl:ObjectProperty ;
+    rdfs:label "aggregate d tw i" ;
+    rdfs:comment "Property that describes de action of aggregation between two different entities or dtw:DigitalTwinInstance."@en ;
+    rdfs:domain dtw:DigitalTwinAggregate ;
+    rdfs:range dtw:DigitalTwinInstance .
+
 dtw:applyModel a owl:ObjectProperty ;
     rdfs:label "apply model" ;
     rdfs:comment "td:InteractionAffordance uses dtw:Model to model something."@en ;
@@ -344,13 +370,34 @@ dtw:instantiate a owl:ObjectProperty ;
 
 dtw:isInternal a owl:DatatypeProperty ;
     rdfs:label "is internal" ;
-    rdfs:comment "Boolean that indicates if the concept is inside or outside the digital twin."@en ;
-    rdfs:range xsd:boolean .
+    rdfs:comment "Boolean that indicates if the concept is inside or outside the digital twin."@en .
+
+dtw:modelAggregatedFrom a owl:ObjectProperty ;
+    rdfs:label "model aggregated from" ;
+    rdfs:comment "dtw:Model used in the aggregation to obtain the DTwA dtw:Model."@en ;
+    rdfs:domain dtw:Model ;
+    rdfs:range dtw:Model .
+
+dtw:modeledBy a owl:ObjectProperty ;
+    rdfs:label "modeled by" ;
+    rdfs:domain dtw:Model ;
+    rdfs:range dtw:Model .
+
+dtw:models a owl:ObjectProperty ;
+    rdfs:label "models" ;
+    rdfs:domain dtw:Model ;
+    rdfs:range dtw:Model .
 
 dtw:represent a owl:ObjectProperty ;
     rdfs:label "represent" ;
     rdfs:comment "dtw:Model models dcat:Resource."@en ;
     rdfs:domain dtw:Model ;
+    rdfs:range dcat:Resource .
+
+dtw:resourceAggregatedFrom a owl:ObjectProperty ;
+    rdfs:label "resource aggregated from" ;
+    rdfs:comment "dcat:Resource used in the aggregation to obtain the DTwA dcat:Resource."@en ;
+    rdfs:domain dcat:Resource ;
     rdfs:range dcat:Resource .
 
 dtw:useDataTo a owl:ObjectProperty ;
@@ -428,14 +475,6 @@ dtw: a owl:Ontology ;
     owl:versionInfo "0.4.0" ;
     mod:createdWith <https://chowlk.linkeddata.es/> .
 
-dtw:DigitalTwinAggregate a owl:Class ;
-    rdfs:label "Digital Twin Aggregate" ;
-    rdfs:comment "Describes the aggregation of all the DTIs. Unlike the DTI, the DTA may not be an independent data structure. It may be a computing construct that has access to all DTIs and queries them either ad-hoc or proactively."@en ;
-    rdfs:subClassOf [ a owl:Restriction ;
-            owl:minCardinality "2"^^xsd:nonNegativeInteger ;
-            owl:onProperty dtw:aggregate ],
-        dtw:DigitalTwin .
-
 dtw:DigitalTwinInstance a owl:Class ;
     rdfs:label "Digital Twin Instance" ;
     rdfs:comment "Describes a specific corresponding physical product that an individual Digital Twin remains linked to throughout the life of that physical product."@en ;
@@ -449,12 +488,6 @@ dtw:Entity a owl:Class ;
 dtw:Format a owl:Class ;
     rdfs:label "Format" ;
     rdfs:comment "Extension format in which the model or data is available."@en .
-
-dtw:aggregate a owl:ObjectProperty ;
-    rdfs:label "aggregate" ;
-    rdfs:comment "Property that describes de action of aggregation between two different entities or dtw:DigitalTwin."@en ;
-    rdfs:domain dtw:DigitalTwinAggregate ;
-    rdfs:range dtw:DigitalTwinInstance .
 
 dtw:containsInteractionAffordance a owl:ObjectProperty ;
     rdfs:label "contains interaction affordance" ;
@@ -530,6 +563,11 @@ dtw:DigitalEntity a owl:Class ;
             owl:onProperty dtw:containsInteractionAffordance ],
         dtw:DigitalTwinDimension .
 
+dtw:DigitalTwinAggregate a owl:Class ;
+    rdfs:label "Digital Twin Aggregate" ;
+    rdfs:comment "Describes the aggregation of all the DTIs. Unlike the DTI, the DTA may not be an independent data structure. It may be a computing construct that has access to all DTIs and queries them either ad-hoc or proactively."@en ;
+    rdfs:subClassOf dtw:DigitalTwin .
+
 dtw:DigitalTwinDimension a owl:Class ;
     rdfs:label "Digital Twin Dimension" ;
     rdfs:comment "Dimensions of which the digital twin is composed."@en .
@@ -541,10 +579,6 @@ dtw:SemanticModel a owl:Class ;
 dcat:Catalog a owl:Class ;
     rdfs:label "Catalog" ;
     rdfs:subClassOf dcat:Dataset .
-
-dtw:ConnectionPoint a owl:Class ;
-    rdfs:label "Connection Point" ;
-    rdfs:comment "Connection point of the connection."@en .
 
 dtw:DigitalTwin a owl:Class ;
     rdfs:label "Digital Twin" ;
@@ -573,6 +607,10 @@ dtw:Connection a owl:Class ;
         [ a owl:Restriction ;
             owl:cardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty dtw:hasConsumer ] .
+
+dtw:ConnectionPoint a owl:Class ;
+    rdfs:label "Connection Point" ;
+    rdfs:comment "Connection point of the connection."@en .
 
 td:InteractionAffordance a owl:Class ;
     rdfs:label "Interaction Affordance" ;
