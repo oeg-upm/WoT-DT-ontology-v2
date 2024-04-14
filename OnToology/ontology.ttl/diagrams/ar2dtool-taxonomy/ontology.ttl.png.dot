@@ -1,0 +1,36 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "dcat:Dataset" "dtw:RulesModel" "dtw:TwinConnection" "dtw:GeometricModel" "dcat:DataService" "dtw:DigitalTwinInstance" "dtw:ModelModelConnection" "dtw:ShapesModel" "td:ActionAffordance" "td:InteractionAffordance" "dtw:MappingModel" "dtw:ConnectionPoint" "td:EventAffordance" "dtw:Entity" "dtw:Model" "dtw:DigitalTwin" "dtw:OntologyModel" "dtw:InternalConnectionPoint" "dtw:DigitalTwinAggregate" "dcat:DatasetSeries" "dtw:ExternalConnectionPoint" "dtw:BehavioralModel" "dtw:DataServiceConnection" "dcat:Resource" "dcat:Catalog" "dtw:DigitalTwinDimension" "dtw:ModelDataConnection" "dtw:SemanticModel" "td:Thing" "td:PropertyAffordance" "dtw:PhysicalModel" "dtw:Connection" "dtw:ModelServiceConnection" "dtw:DigitalEntity" ; /*classes style*/
+	"dtw:Model" -> "dtw:ConnectionPoint" [ label = "rdfs:subClassOf" ];
+	"dcat:DatasetSeries" -> "dcat:Dataset" [ label = "rdfs:subClassOf" ];
+	"td:EventAffordance" -> "td:InteractionAffordance" [ label = "rdfs:subClassOf" ];
+	"dtw:DigitalTwin" -> "td:Thing" [ label = "rdfs:subClassOf" ];
+	"dtw:DigitalTwinInstance" -> "dtw:DigitalTwin" [ label = "rdfs:subClassOf" ];
+	"dcat:Catalog" -> "dcat:Dataset" [ label = "rdfs:subClassOf" ];
+	"dtw:Entity" -> "dtw:DigitalTwinDimension" [ label = "rdfs:subClassOf" ];
+	"dtw:TwinConnection" -> "dtw:DigitalTwinDimension" [ label = "rdfs:subClassOf" ];
+	"dtw:ExternalConnectionPoint" -> "dtw:ConnectionPoint" [ label = "rdfs:subClassOf" ];
+	"dtw:DigitalEntity" -> "dtw:DigitalTwinDimension" [ label = "rdfs:subClassOf" ];
+	"dtw:ShapesModel" -> "dtw:SemanticModel" [ label = "rdfs:subClassOf" ];
+	"dtw:InternalConnectionPoint" -> "dtw:ConnectionPoint" [ label = "rdfs:subClassOf" ];
+	"dtw:ModelServiceConnection" -> "dtw:Connection" [ label = "rdfs:subClassOf" ];
+	"dtw:DataServiceConnection" -> "dtw:Connection" [ label = "rdfs:subClassOf" ];
+	"dtw:BehavioralModel" -> "dtw:Model" [ label = "rdfs:subClassOf" ];
+	"dtw:ModelDataConnection" -> "dtw:Connection" [ label = "rdfs:subClassOf" ];
+	"dtw:SemanticModel" -> "dtw:Model" [ label = "rdfs:subClassOf" ];
+	"dtw:MappingModel" -> "dtw:SemanticModel" [ label = "rdfs:subClassOf" ];
+	"dtw:GeometricModel" -> "dtw:Model" [ label = "rdfs:subClassOf" ];
+	"dtw:RulesModel" -> "dtw:Model" [ label = "rdfs:subClassOf" ];
+	"dtw:PhysicalModel" -> "dtw:Model" [ label = "rdfs:subClassOf" ];
+	"dcat:Resource" -> "dtw:ConnectionPoint" [ label = "rdfs:subClassOf" ];
+	"dtw:ModelModelConnection" -> "dtw:Connection" [ label = "rdfs:subClassOf" ];
+	"dtw:DigitalTwinAggregate" -> "dtw:DigitalTwin" [ label = "rdfs:subClassOf" ];
+	"dcat:Dataset" -> "dcat:Resource" [ label = "rdfs:subClassOf" ];
+	"td:PropertyAffordance" -> "td:InteractionAffordance" [ label = "rdfs:subClassOf" ];
+	"dcat:DataService" -> "dcat:Resource" [ label = "rdfs:subClassOf" ];
+	"dtw:OntologyModel" -> "dtw:SemanticModel" [ label = "rdfs:subClassOf" ];
+	"td:InteractionAffordance" -> "dtw:ConnectionPoint" [ label = "rdfs:subClassOf" ];
+	"td:ActionAffordance" -> "td:InteractionAffordance" [ label = "rdfs:subClassOf" ];
+
+}

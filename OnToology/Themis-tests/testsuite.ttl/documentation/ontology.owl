@@ -1,0 +1,267 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:vtc="https://w3id.org/def/vtc#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <Ontology/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/def/vtc#desiredBehaviour -->
+
+
+    <AnnotationProperty rdf:about="https://w3id.org/def/vtc#desiredBehaviour"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/def/vtc#TestCaseDesign -->
+
+
+    <Class rdf:about="https://w3id.org/def/vtc#TestCaseDesign"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://example.org/ns#Test1 -->
+
+
+    <NamedIndividual rdf:about="http://example.org/ns#Test1">
+        <rdf:type rdf:resource="https://w3id.org/def/vtc#TestCaseDesign"/>
+        <vtc:desiredBehaviour>InteractionAffordance subClassOf ConnectionPoint</vtc:desiredBehaviour>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/ns#Test10 -->
+
+
+    <NamedIndividual rdf:about="http://example.org/ns#Test10">
+        <rdf:type rdf:resource="https://w3id.org/def/vtc#TestCaseDesign"/>
+        <vtc:desiredBehaviour>BehavioralModel subClassOf Model</vtc:desiredBehaviour>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/ns#Test11 -->
+
+
+    <NamedIndividual rdf:about="http://example.org/ns#Test11">
+        <rdf:type rdf:resource="https://w3id.org/def/vtc#TestCaseDesign"/>
+        <vtc:desiredBehaviour>RulesModel subClassOf Model</vtc:desiredBehaviour>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/ns#Test12 -->
+
+
+    <NamedIndividual rdf:about="http://example.org/ns#Test12">
+        <rdf:type rdf:resource="https://w3id.org/def/vtc#TestCaseDesign"/>
+        <vtc:desiredBehaviour>VirtualEntity hasModels Model</vtc:desiredBehaviour>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/ns#Test13 -->
+
+
+    <NamedIndividual rdf:about="http://example.org/ns#Test13">
+        <rdf:type rdf:resource="https://w3id.org/def/vtc#TestCaseDesign"/>
+        <vtc:desiredBehaviour>Device subClassOf Component</vtc:desiredBehaviour>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/ns#Test14 -->
+
+
+    <NamedIndividual rdf:about="http://example.org/ns#Test14">
+        <rdf:type rdf:resource="https://w3id.org/def/vtc#TestCaseDesign"/>
+        <vtc:desiredBehaviour>PhysicalEntity hasComponents Component</vtc:desiredBehaviour>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/ns#Test15 -->
+
+
+    <NamedIndividual rdf:about="http://example.org/ns#Test15">
+        <rdf:type rdf:resource="https://w3id.org/def/vtc#TestCaseDesign"/>
+        <vtc:desiredBehaviour>DigitalTwin hasDigitalTwinConnections DigitalTwinConnection</vtc:desiredBehaviour>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/ns#Test16 -->
+
+
+    <NamedIndividual rdf:about="http://example.org/ns#Test16">
+        <rdf:type rdf:resource="https://w3id.org/def/vtc#TestCaseDesign"/>
+        <vtc:desiredBehaviour>DigitalTwin hasDigitalTwinServices DigitalTwinService</vtc:desiredBehaviour>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/ns#Test17 -->
+
+
+    <NamedIndividual rdf:about="http://example.org/ns#Test17">
+        <rdf:type rdf:resource="https://w3id.org/def/vtc#TestCaseDesign"/>
+        <vtc:desiredBehaviour>DigitalTwin hasDigitalTwinData DigitalTwinData</vtc:desiredBehaviour>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/ns#Test18 -->
+
+
+    <NamedIndividual rdf:about="http://example.org/ns#Test18">
+        <rdf:type rdf:resource="https://w3id.org/def/vtc#TestCaseDesign"/>
+        <vtc:desiredBehaviour>DigitalTwin hasVirtualEntities VirtualEntity</vtc:desiredBehaviour>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/ns#Test19 -->
+
+
+    <NamedIndividual rdf:about="http://example.org/ns#Test19">
+        <rdf:type rdf:resource="https://w3id.org/def/vtc#TestCaseDesign"/>
+        <vtc:desiredBehaviour>DigitalTwin hasPhysicalEntities PhysicalEntity</vtc:desiredBehaviour>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/ns#Test2 -->
+
+
+    <NamedIndividual rdf:about="http://example.org/ns#Test2">
+        <rdf:type rdf:resource="https://w3id.org/def/vtc#TestCaseDesign"/>
+        <vtc:desiredBehaviour>Resource subClassOf ConnectionPoint</vtc:desiredBehaviour>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/ns#Test20 -->
+
+
+    <NamedIndividual rdf:about="http://example.org/ns#Test20">
+        <rdf:type rdf:resource="https://w3id.org/def/vtc#TestCaseDesign"/>
+        <vtc:desiredBehaviour>DigitalTwin subClassOf td#:Thing</vtc:desiredBehaviour>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/ns#Test3 -->
+
+
+    <NamedIndividual rdf:about="http://example.org/ns#Test3">
+        <rdf:type rdf:resource="https://w3id.org/def/vtc#TestCaseDesign"/>
+        <vtc:desiredBehaviour>Model subClassOf ConnectionPoint</vtc:desiredBehaviour>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/ns#Test4 -->
+
+
+    <NamedIndividual rdf:about="http://example.org/ns#Test4">
+        <rdf:type rdf:resource="https://w3id.org/def/vtc#TestCaseDesign"/>
+        <vtc:desiredBehaviour>DigitalTwinConnection hasConnections Connection</vtc:desiredBehaviour>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/ns#Test5 -->
+
+
+    <NamedIndividual rdf:about="http://example.org/ns#Test5">
+        <rdf:type rdf:resource="https://w3id.org/def/vtc#TestCaseDesign"/>
+        <vtc:desiredBehaviour>DigitalTwinService hasInteractionAffordance InteractionAffordance</vtc:desiredBehaviour>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/ns#Test6 -->
+
+
+    <NamedIndividual rdf:about="http://example.org/ns#Test6">
+        <rdf:type rdf:resource="https://w3id.org/def/vtc#TestCaseDesign"/>
+        <vtc:desiredBehaviour>DigitalTwinData hasData Resource</vtc:desiredBehaviour>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/ns#Test7 -->
+
+
+    <NamedIndividual rdf:about="http://example.org/ns#Test7">
+        <rdf:type rdf:resource="https://w3id.org/def/vtc#TestCaseDesign"/>
+        <vtc:desiredBehaviour>SemanticModel subClassOf Model</vtc:desiredBehaviour>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/ns#Test8 -->
+
+
+    <NamedIndividual rdf:about="http://example.org/ns#Test8">
+        <rdf:type rdf:resource="https://w3id.org/def/vtc#TestCaseDesign"/>
+        <vtc:desiredBehaviour>GeometricModel subClassOf Model</vtc:desiredBehaviour>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.org/ns#Test9 -->
+
+
+    <NamedIndividual rdf:about="http://example.org/ns#Test9">
+        <rdf:type rdf:resource="https://w3id.org/def/vtc#TestCaseDesign"/>
+        <vtc:desiredBehaviour>PhysicalModel subClassOf Model</vtc:desiredBehaviour>
+    </NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+
