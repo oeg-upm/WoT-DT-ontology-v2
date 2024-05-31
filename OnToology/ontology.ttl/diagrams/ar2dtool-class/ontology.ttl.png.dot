@@ -2,15 +2,15 @@ digraph ar2dtool_diagram {
 rankdir=LR;
 size="1501"
 node [shape = rectangle, color="orange"]; "dcat:Dataset" "dtw:Format" "dcat:DataService" "dtw:DigitalTwinInstance" "td:InteractionAffordance" "dtw:ConnectionPoint" "dtw:Entity" "dtw:Model" "dtw:DigitalTwin" "dcat:CatalogRecord" "dtw:DigitalTwinAggregate" "dcat:Relationship" "dcat:DatasetSeries" "dcat:Resource" "dcat:Catalog" "dcat:Distribution" "dtw:Connection" "dtw:DigitalEntity" ; /*classes style*/
-	"NULL" -> "dtw:hasEntity" [ label = "owl:onProperty" ];
-	"NULL" -> "dtw:hasConsumer" [ label = "owl:onProperty" ];
-	"NULL" -> "dtw:hasDigitalEntity" [ label = "owl:onProperty" ];
-	"NULL" -> "dtw:hasModel" [ label = "owl:onProperty" ];
-	"NULL" -> "dtw:hasFormat" [ label = "owl:onProperty" ];
-	"NULL" -> "dtw:hasData" [ label = "owl:onProperty" ];
-	"NULL" -> "dtw:hasConnection" [ label = "owl:onProperty" ];
-	"NULL" -> "dtw:hasProvider" [ label = "owl:onProperty" ];
 	"NULL" -> "dtw:containsInteractionAffordance" [ label = "owl:onProperty" ];
+	"NULL" -> "dtw:hasDigitalEntity" [ label = "owl:onProperty" ];
+	"NULL" -> "dtw:hasConsumer" [ label = "owl:onProperty" ];
+	"NULL" -> "dtw:hasConnection" [ label = "owl:onProperty" ];
+	"NULL" -> "dtw:hasModel" [ label = "owl:onProperty" ];
+	"NULL" -> "dtw:hasProvider" [ label = "owl:onProperty" ];
+	"NULL" -> "dtw:hasData" [ label = "owl:onProperty" ];
+	"NULL" -> "dtw:hasEntity" [ label = "owl:onProperty" ];
+	"NULL" -> "dtw:hasFormat" [ label = "owl:onProperty" ];
 	"dtw:" -> "https://chowlk.linkeddata.es/" [ label = "mod:createdWith" ];
 	"dtw:" -> "https://creativecommons.org/licenses/by/4.0/" [ label = "dc:license" ];
 	"dtw:" -> "dtw:" [ label = "vann:preferredNamespaceUri" ];
