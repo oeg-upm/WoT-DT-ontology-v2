@@ -215,6 +215,7 @@ dcat:record a owl:DatatypeProperty,
 dcat:resource a owl:DatatypeProperty,
         owl:ObjectProperty ;
     rdfs:label "resource" ;
+    rdfs:domain dcat:Catalog ;
     rdfs:range dcat:Resource .
 
 dcat:servesDataset a owl:DatatypeProperty,
@@ -348,35 +349,34 @@ dtw:applyModel a owl:ObjectProperty ;
     rdfs:domain td:InteractionAffordance ;
     rdfs:range dtw:Model .
 
-dtw:hasData a owl:ObjectProperty ;
-    rdfs:label "has data" ;
-    rdfs:comment "Property that describes the different data that the dt:DigitalTwinData contains."@en ;
-    rdfs:range dcat:Resource .
-
-dtw:hasDigitalEntity a owl:ObjectProperty ;
-    rdfs:label "has digital entity" ;
-    rdfs:comment "Property that describes the different Digital Entities that the digital twin contains."@en .
+dtw:hasConceptualisation a owl:ObjectProperty ;
+    rdfs:label "has conceptualisation" ;
+    rdfs:comment "dcat:Resource instantiate dtw:Model."@en ;
+    rdfs:domain dcat:Resource ;
+    rdfs:range dtw:Model .
 
 dtw:hasExtension a owl:DatatypeProperty ;
     rdfs:label "has extension" ;
     rdfs:comment "Extension of the model or data with which can be found."@en ;
     rdfs:range xsd:string .
 
-dtw:instantiate a owl:ObjectProperty ;
-    rdfs:label "instantiate" ;
-    rdfs:comment "dcat:Resource instantiate dtw:Model."@en ;
-    rdfs:domain dcat:Resource ;
-    rdfs:range dtw:Model .
+dtw:hasRepresentation a owl:ObjectProperty ;
+    rdfs:label "has representation" ;
+    rdfs:comment "dtw:Model models dcat:Resource."@en ;
+    rdfs:domain dtw:Model ;
+    rdfs:range dcat:Resource .
+
+dtw:isAggregatedFrom a owl:ObjectProperty ;
+    rdfs:label "is aggregated from" ;
+    rdfs:comment "Resource aggregated from."@en ;
+    rdfs:domain dcat:Resource,
+        dtw:Model ;
+    rdfs:range dcat:Resource,
+        dtw:Model .
 
 dtw:isInternal a owl:DatatypeProperty ;
     rdfs:label "is internal" ;
     rdfs:comment "Boolean that indicates if the concept is inside or outside the digital twin."@en .
-
-dtw:modelAggregatedFrom a owl:ObjectProperty ;
-    rdfs:label "model aggregated from" ;
-    rdfs:comment "dtw:Model used in the aggregation to obtain the DTwA dtw:Model."@en ;
-    rdfs:domain dtw:Model ;
-    rdfs:range dtw:Model .
 
 dtw:modeledBy a owl:ObjectProperty ;
     rdfs:label "modeled by" ;
@@ -387,18 +387,6 @@ dtw:models a owl:ObjectProperty ;
     rdfs:label "models" ;
     rdfs:domain dtw:Model ;
     rdfs:range dtw:Model .
-
-dtw:represent a owl:ObjectProperty ;
-    rdfs:label "represent" ;
-    rdfs:comment "dtw:Model models dcat:Resource."@en ;
-    rdfs:domain dtw:Model ;
-    rdfs:range dcat:Resource .
-
-dtw:resourceAggregatedFrom a owl:ObjectProperty ;
-    rdfs:label "resource aggregated from" ;
-    rdfs:comment "dcat:Resource used in the aggregation to obtain the DTwA dcat:Resource."@en ;
-    rdfs:domain dcat:Resource ;
-    rdfs:range dcat:Resource .
 
 dtw:useDataTo a owl:ObjectProperty ;
     rdfs:label "use data to" ;
@@ -507,8 +495,15 @@ dtw:hasConsumer a owl:ObjectProperty ;
     rdfs:domain dtw:Connection ;
     rdfs:range dtw:ConnectionPoint .
 
-dtw:hasDigitalTwinData a owl:ObjectProperty ;
-    rdfs:label "has digital twin data" ;
+dtw:hasData a owl:ObjectProperty ;
+    rdfs:label "has data" ;
+    rdfs:comment "Property that describes the different data that the dt:DigitalTwinData contains."@en ;
+    rdfs:domain dtw:DigitalEntity ;
+    rdfs:range dcat:Resource .
+
+dtw:hasDigitalEntity a owl:ObjectProperty ;
+    rdfs:label "has digital entity" ;
+    rdfs:comment "Property that describes the different Digital Entities that the digital twin contains."@en ;
     rdfs:domain dtw:DigitalTwin ;
     rdfs:range dtw:DigitalEntity .
 
@@ -552,17 +547,6 @@ dcat:DataService a owl:Class ;
     rdfs:label "Data Service" ;
     rdfs:subClassOf dcat:Resource .
 
-dtw:DigitalEntity a owl:Class ;
-    rdfs:label "Digital Entity" ;
-    rdfs:comment "This dimension of the digital twin consists of various data models that represents all the information allocated in the digital twin."@en ;
-    rdfs:subClassOf [ a owl:Restriction ;
-            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty dtw:hasModel ],
-        [ a owl:Restriction ;
-            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty dtw:containsInteractionAffordance ],
-        dtw:DigitalTwinDimension .
-
 dtw:DigitalTwinAggregate a owl:Class ;
     rdfs:label "Digital Twin Aggregate" ;
     rdfs:comment "Describes the aggregation of all the DTIs. Unlike the DTI, the DTA may not be an independent data structure. It may be a computing construct that has access to all DTIs and queries them either ad-hoc or proactively."@en ;
@@ -576,9 +560,19 @@ dtw:SemanticModel a owl:Class ;
     rdfs:label "Semantic Model" ;
     rdfs:subClassOf dtw:Model .
 
-dcat:Catalog a owl:Class ;
-    rdfs:label "Catalog" ;
-    rdfs:subClassOf dcat:Dataset .
+dtw:DigitalEntity a owl:Class ;
+    rdfs:label "Digital Entity" ;
+    rdfs:comment "This dimension of the digital twin consists of various data models that represents all the information allocated in the digital twin."@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty dtw:hasModel ],
+        [ a owl:Restriction ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty dtw:hasData ],
+        [ a owl:Restriction ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty dtw:containsInteractionAffordance ],
+        dtw:DigitalTwinDimension .
 
 dtw:DigitalTwin a owl:Class ;
     rdfs:label "Digital Twin" ;
@@ -588,11 +582,15 @@ dtw:DigitalTwin a owl:Class ;
             owl:onProperty dtw:hasEntity ],
         [ a owl:Restriction ;
             owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty dtw:hasDigitalTwinData ],
+            owl:onProperty dtw:hasDigitalEntity ],
         [ a owl:Restriction ;
             owl:minCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty dtw:hasConnection ],
         td:Thing .
+
+dcat:Catalog a owl:Class ;
+    rdfs:label "Catalog" ;
+    rdfs:subClassOf dcat:Dataset .
 
 dcat:Dataset a owl:Class ;
     rdfs:label "Dataset" ;
