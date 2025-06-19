@@ -3,66 +3,66 @@
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![Version: 0.5.0](https://img.shields.io/badge/Version-0.5.0-blue.svg)](https://w3id.org/def/dtw#)
 
-Esta es una ontología para definir Gemelos Digitales (Digital Twins) y Gemelos Digitales Semánticos, así como sus agregaciones, utilizando los estándares del Web of Things (WoT) del W3C. El objetivo es proporcionar un vocabulario común para describir las diferentes dimensiones de un Gemelo Digital, basándose en la especificación `WoT Thing Description`.
+This is an ontology for defining Digital Twins and Semantic Digital Twins, as well as their aggregations, using W3C's Web of Things (WoT) standards. The objective is to provide a common vocabulary to describe the different dimensions of a Digital Twin, based on the `WoT Thing Description` specification.
 
-## Información General
+## General Information
 
-| Campo | Valor |
+| Field | Value |
 | --- | --- |
-| **Versión** | 0.5.0 |
+| **Version** | 0.5.0 |
 | **Namespace** | `https://w3id.org/def/dtw#` |
-| **Prefijo recomendado** | `dtw` |
-| **Creador** | Salvador González Gerpe |
-| **Colaboradores** | Andrea Cimmino, María Poveda Villalón, Raúl García Castro, Socorro Bernardos |
-| **Dependencias** | `dcat3`, `wot-td` |
+| **Recommended prefix** | `dtw` |
+| **Creator** | Salvador González Gerpe |
+| **Contributors** | Andrea Cimmino, María Poveda Villalón, Raúl García Castro, Socorro Bernardos |
+| **Dependencies** | `dcat3`, `wot-td` |
 
-## Modelo Conceptual
+## Conceptual Model
 
-La ontología WoTDT modela un Gemelo Digital como una entidad compatible con el ecosistema del Web of Things (WoT).
+The WoTDT ontology models a Digital Twin as an entity compatible with the Web of Things (WoT) ecosystem.
 
-### El Gemelo Digital (`dtw:DigitalTwin`)
+### The Digital Twin (`dtw:DigitalTwin`)
 
-El concepto central es `dtw:DigitalTwin`, que se define como una especialización de `td:Thing` del estándar Web of Things. Esto permite que cualquier Gemelo Digital descrito con WoTDT sea directamente compatible con el ecosistema WoT y sus herramientas.
+The central concept is `dtw:DigitalTwin`, which is defined as a specialization of `td:Thing` from the Web of Things standard. This allows any Digital Twin described with WoTDT to be directly compatible with the WoT ecosystem and its tools.
 
-Un `DigitalTwin` se compone de tres dimensiones principales:
+A `DigitalTwin` is composed of three main dimensions:
 
-1.  **`dtw:PhysicalEntity`**: Representa el activo físico del mundo real que el gemelo digitaliza. Cada gemelo digital debe estar asociado a **exactamente una** entidad física.
-2.  **`dtw:DigitalEntity`**: Es el contenedor de toda la información y lógica digital. Un gemelo digital debe tener **al menos una** de estas entidades.
-3.  **`dtw:Connection`**: Define las relaciones y flujos de datos entre las diferentes partes del gemelo digital y con sistemas externos.
+1.  **`dtw:PhysicalEntity`**: Represents the real-world physical asset that the twin digitizes. Each digital twin must be associated with **exactly one** physical entity.
+2.  **`dtw:DigitalEntity`**: This is the container for all digital information and logic. A digital twin must have **at least one** of these entities.
+3.  **`dtw:Connection`**: Defines the relationships and data flows between the different parts of the digital twin and with external systems.
 
-### La Entidad Digital (`dtw:DigitalEntity`)
+### The Digital Entity (`dtw:DigitalEntity`)
 
-La clase `dtw:DigitalEntity` es el núcleo digital y agrupa los siguientes aspectos:
+The `dtw:DigitalEntity` class is the digital core and groups the following aspects:
 
-* **Modelos (`dtw:Model`)**: Representaciones y abstracciones del sistema. La ontología define una jerarquía de modelos para cubrir diferentes necesidades:
-    * Modelos de comportamiento (`dtw:BehavioralModel`).
-    * Modelos geométricos (`dtw:GeometricModel`).
-    * Modelos físicos (`dtw:PhysicalModel`).
-    * Modelos de reglas (`dtw:RulesModel`).
-    * Modelos semánticos (`dtw:SemanticModel`), que a su vez incluyen ontologías (`dtw:OntologyModel`), mapeos (`dtw:MappingModel`) y validaciones (`dtw:ShapesModel`).
-* **Datos (`dcat:Resource`)**: Los datos del gemelo, utilizando el vocabulario DCAT del W3C para describir conjuntos de datos.
-* **Servicios (`td:InteractionAffordance`)**: Las capacidades de interacción (propiedades, acciones y eventos) del gemelo, reutilizando directamente el modelo de interacción de WoT.
+* **Models (`dtw:Model`)**: Representations and abstractions of the system. The ontology defines a hierarchy of models to cover different needs:
+    * Behavioral models (`dtw:BehavioralModel`).
+    * Geometric models (`dtw:GeometricModel`).
+    * Physical models (`dtw:PhysicalModel`).
+    * Rules models (`dtw:RulesModel`).
+    * Semantic models (`dtw:SemanticModel`), which in turn include ontologies (`dtw:OntologyModel`), mappings (`dtw:MappingModel`), and validations (`dtw:ShapesModel`).
+* **Data (`dcat:Resource`)**: The twin's data, using the W3C DCAT vocabulary to describe datasets.
+* **Services (`td:InteractionAffordance`)**: The interaction capabilities (properties, actions, and events) of the twin, directly reusing the WoT interaction model.
 
-### Agregación y Sistemas de Sistemas
+### Aggregation and Systems of Systems
 
-WoTDT permite modelar sistemas complejos mediante la agregación de gemelos:
+WoTDT allows modeling complex systems through the aggregation of twins:
 
-* **`dtw:DigitalTwinInstance`**: Representa un gemelo individual y específico, vinculado a un activo físico.
-* **`dtw:DigitalTwinAggregate`**: Representa una composición o un "sistema de sistemas", formado por la agregación de múltiples `DigitalTwinInstance` y/o otros `DigitalTwinAggregate`. Esto se logra a través de propiedades como `dtw:aggregateDTwI` y `dtw:aggregateDTwA`.
+* **`dtw:DigitalTwinInstance`**: Represents a single, specific twin, linked to a physical asset.
+* **`dtw:DigitalTwinAggregate`**: Represents a composition or "system of systems," formed by the aggregation of multiple `DigitalTwinInstance` and/or other `DigitalTwinAggregate`. This is achieved through properties like `dtw:aggregateDTwI` and `dtw:aggregateDTwA`.
 
-### Conexiones
+### Connections
 
-Las conexiones se establecen a través de la clase `dtw:Connection`, que enlaza diferentes `dtw:ConnectionPoint`. Las clases `dtw:Model`, `dcat:Resource` y `td:InteractionAffordance` pueden actuar como puntos de conexión, permitiendo un flujo de información explícito y bien definido entre modelos, datos y servicios.
+Connections are established through the `dtw:Connection` class, which links different `dtw:ConnectionPoint`. The classes `dtw:Model`, `dcat:Resource`, and `td:InteractionAffordance` can act as connection points, allowing for an explicit and well-defined flow of information between models, data, and services.
 
-## Cómo Utilizar
+## How to Use
 
-Para utilizar esta ontología, importa la siguiente URI en tu proyecto: [https://w3id.org/def/dtw](https://w3id.org/def/dtw)
+To use this ontology, import the following URI in your project: [https://w3id.org/def/dtw](https://w3id.org/def/dtw)
 
-Se recomienda usar el prefijo `dtw` para el namespace.
+It is recommended to use the `dtw` prefix for the namespace.
 
-## Cómo Citar
+## How to Cite
 
-Si utilizas esta ontología en tu trabajo, por favor, cita a sus autores.
+If you use this ontology in your work, please cite its authors.
 
 ```bibtex
 @misc{wotdt,
