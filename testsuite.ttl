@@ -1,87 +1,67 @@
 @prefix : <http://example.org/ns#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://example.org/ns#> .
+@prefix dtw: <https://w3id.org/def/dtw#> .
+@prefix td: <https://www.w3.org/2019/wot/td#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix hctl: <https://www.w3.org/2019/wot/hypermedia#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix vtc: <https://w3id.org/def/vtc#> .
 
+# WOTDT-1: DigitalTwin is subclass of td:Thing
+:Test_WOTDT_1 a vtc:TestCaseDesign;
+    vtc:desiredBehaviour "dtw:DigitalTwin SubClassOf td:Thing" .
 
+# WOTDT-3-4: exactly one PhysicalEntity per DigitalTwin
+:Test_WOTDT_3_4 a vtc:TestCaseDesign;
+    vtc:desiredBehaviour "dtw:DigitalTwin SubClassOf dtw:hasPhysicalEntity exactly 1 dtw:PhysicalEntity" .
 
-:Test1 rdf:type <https://w3id.org/def/vtc#TestCaseDesign> ,
-                owl:NamedIndividual ;
-       <https://w3id.org/def/vtc#desiredBehaviour> "InteractionAffordance subClassOf ConnectionPoint" .
+# WOTDT-5-7: at least one DigitalEntity per DigitalTwin
+:Test_WOTDT_5_6_7 a vtc:TestCaseDesign;
+    vtc:desiredBehaviour "dtw:DigitalTwin SubClassOf dtw:hasDigitalEntity some dtw:DigitalEntity" .
 
-:Test2 rdf:type <https://w3id.org/def/vtc#TestCaseDesign> ,
-                owl:NamedIndividual ;
-       <https://w3id.org/def/vtc#desiredBehaviour> "Resource subClassOf ConnectionPoint" .
+# WOTDT-8-10: DigitalEntity has various types of Models
+:Test_WOTDT_8_9_10 a vtc:TestCaseDesign;
+    vtc:desiredBehaviour "dtw:DigitalEntity SubClassOf dtw:hasModels some dtw:BehavioralModel and dtw:hasModels some dtw:PhysicalModel and dtw:hasModels some dtw:GeometricModel and dtw:hasModels some dtw:RulesModel and dtw:hasModels some dtw:SemanticModel" .
 
-:Test3 rdf:type <https://w3id.org/def/vtc#TestCaseDesign> ,
-                owl:NamedIndividual ;
-       <https://w3id.org/def/vtc#desiredBehaviour> "Model subClassOf ConnectionPoint" .
+# WOTDT-11: Model has Format with hctl target and extension
+:Test_WOTDT_11 a vtc:TestCaseDesign;
+    vtc:desiredBehaviour "dtw:Model SubClassOf dtw:hasFormat some dtw:Format and dtw:Format SubClassOf hctl:hasTarget some and dtw:Format SubClassOf dcterms:hasExtension some" .
 
-:Test4 rdf:type <https://w3id.org/def/vtc#TestCaseDesign> ,
-                owl:NamedIndividual ;
-       <https://w3id.org/def/vtc#desiredBehaviour> "DigitalTwinConnection hasConnections Connection" .
+# WOTDT-12-13: DigitalEntity has Data resources
+:Test_WOTDT_12_13 a vtc:TestCaseDesign;
+    vtc:desiredBehaviour "dtw:DigitalEntity SubClassOf dtw:hasData some dcat:Resource" .
 
-:Test5 rdf:type <https://w3id.org/def/vtc#TestCaseDesign> ,
-                owl:NamedIndividual ;
-       <https://w3id.org/def/vtc#desiredBehaviour> "DigitalTwinService hasInteractionAffordance InteractionAffordance" .
+# WOTDT-14-15: DigitalEntity contains InteractionAffordances
+:Test_WOTDT_14_15 a vtc:TestCaseDesign;
+    vtc:desiredBehaviour "dtw:DigitalEntity SubClassOf dtw:containsInteractionAffordance some td:InteractionAffordance" .
 
-:Test6 rdf:type <https://w3id.org/def/vtc#TestCaseDesign> ,
-                owl:NamedIndividual ;
-       <https://w3id.org/def/vtc#desiredBehaviour> "DigitalTwinData hasData Resource" .
+# WOTDT-16-18: DigitalTwin has Connections of various types
+:Test_WOTDT_16_17_18 a vtc:TestCaseDesign;
+    vtc:desiredBehaviour "dtw:DigitalTwin SubClassOf dtw:hasConnection some dtw:ModelModelConnection and dtw:hasConnection some dtw:ModelDataConnection and dtw:hasConnection some dtw:ModelServiceConnection and dtw:hasConnection some dtw:DataServiceConnection" .
 
-:Test7 rdf:type <https://w3id.org/def/vtc#TestCaseDesign> ,
-                owl:NamedIndividual ;
-       <https://w3id.org/def/vtc#desiredBehaviour> "SemanticModel subClassOf Model" .
+# WOTDT-19: ConnectionPoint subclasses
+:Test_WOTDT_19 a vtc:TestCaseDesign;
+    vtc:desiredBehaviour "dtw:ConnectionPoint SubClassOf dtw:InternalConnectionPoint and dtw:ConnectionPoint SubClassOf dtw:ExternalConnectionPoint" .
 
-:Test8 rdf:type <https://w3id.org/def/vtc#TestCaseDesign> ,
-                owl:NamedIndividual ;
-       <https://w3id.org/def/vtc#desiredBehaviour> "GeometricModel subClassOf Model" .
+# WOTDT-20: Connection has provider and consumer
+:Test_WOTDT_20 a vtc:TestCaseDesign;
+    vtc:desiredBehaviour "dtw:Connection SubClassOf dtw:hasProvider some dtw:ConnectionPoint and dtw:Connection SubClassOf dtw:hasConsumer some dtw:ConnectionPoint" .
 
-:Test9 rdf:type <https://w3id.org/def/vtc#TestCaseDesign> ,
-                owl:NamedIndividual ;
-       <https://w3id.org/def/vtc#desiredBehaviour> "PhysicalModel subClassOf Model" .
+# WOTDT-21: Resources, Models, Affordances have connection points
+:Test_WOTDT_21 a vtc:TestCaseDesign;
+    vtc:desiredBehaviour "dtw:Model SubClassOf dtw:hasConnectionPoint some dtw:ConnectionPoint and dcat:Resource SubClassOf dtw:hasConnectionPoint some dtw:ConnectionPoint and td:InteractionAffordance SubClassOf dtw:hasConnectionPoint some dtw:ConnectionPoint" .
 
-:Test10 rdf:type <https://w3id.org/def/vtc#TestCaseDesign> ,
-                owl:NamedIndividual ;
-       <https://w3id.org/def/vtc#desiredBehaviour> "BehavioralModel subClassOf Model" .
+# WOTDT-22: DigitalTwinInstance subclass
+:Test_WOTDT_22 a vtc:TestCaseDesign;
+    vtc:desiredBehaviour "dtw:DigitalTwinInstance SubClassOf dtw:DigitalTwin" .
 
-:Test11 rdf:type <https://w3id.org/def/vtc#TestCaseDesign> ,
-                owl:NamedIndividual ;
-       <https://w3id.org/def/vtc#desiredBehaviour> "RulesModel subClassOf Model" .
+# WOTDT-23: DigitalTwinAggregate subclass and aggregation relations
+:Test_WOTDT_23 a vtc:TestCaseDesign;
+    vtc:desiredBehaviour "dtw:DigitalTwinAggregate SubClassOf dtw:DigitalTwin and dtw:DigitalTwinAggregate SubClassOf dtw:aggregateDTwI some dtw:DigitalTwinInstance and dtw:DigitalTwinAggregate SubClassOf dtw:aggregateDTwA some dtw:DigitalTwinAggregate" .
 
-:Test12 rdf:type <https://w3id.org/def/vtc#TestCaseDesign> ,
-                owl:NamedIndividual ;
-       <https://w3id.org/def/vtc#desiredBehaviour> "VirtualEntity hasModels Model" .
+# WOTDT-24: Model aggregated from others
+:Test_WOTDT_24 a vtc:TestCaseDesign;
+    vtc:desiredBehaviour "dtw:Model SubClassOf dtw:modelAggregatedFrom some dtw:Model" .
 
-:Test13 rdf:type <https://w3id.org/def/vtc#TestCaseDesign> ,
-                owl:NamedIndividual ;
-       <https://w3id.org/def/vtc#desiredBehaviour> "Device subClassOf Component" .
-
-:Test14 rdf:type <https://w3id.org/def/vtc#TestCaseDesign> ,
-                owl:NamedIndividual ;
-       <https://w3id.org/def/vtc#desiredBehaviour> "PhysicalEntity hasComponents Component" .
-
-:Test15 rdf:type <https://w3id.org/def/vtc#TestCaseDesign> ,
-                owl:NamedIndividual ;
-       <https://w3id.org/def/vtc#desiredBehaviour> "DigitalTwin hasDigitalTwinConnections DigitalTwinConnection" .
-
-:Test16 rdf:type <https://w3id.org/def/vtc#TestCaseDesign> ,
-                owl:NamedIndividual ;
-       <https://w3id.org/def/vtc#desiredBehaviour> "DigitalTwin hasDigitalTwinServices DigitalTwinService" .
-
-:Test17 rdf:type <https://w3id.org/def/vtc#TestCaseDesign> ,
-                owl:NamedIndividual ;
-       <https://w3id.org/def/vtc#desiredBehaviour> "DigitalTwin hasDigitalTwinData DigitalTwinData" .
-
-:Test18 rdf:type <https://w3id.org/def/vtc#TestCaseDesign> ,
-                owl:NamedIndividual ;
-       <https://w3id.org/def/vtc#desiredBehaviour> "DigitalTwin hasVirtualEntities VirtualEntity" .
-
-:Test19 rdf:type <https://w3id.org/def/vtc#TestCaseDesign> ,
-                owl:NamedIndividual ;
-       <https://w3id.org/def/vtc#desiredBehaviour> "DigitalTwin hasPhysicalEntities PhysicalEntity" .
-
-:Test20 rdf:type <https://w3id.org/def/vtc#TestCaseDesign> ,
-                owl:NamedIndividual ;
-       <https://w3id.org/def/vtc#desiredBehaviour> "DigitalTwin subClassOf td#:Thing" .
+# WOTDT-25: Data resources aggregated from others
+:Test_WOTDT_25 a vtc:TestCaseDesign;
+    vtc:desiredBehaviour "dcat:Resource SubClassOf dtw:resourceAggregatedFrom some dcat:Resource" .
