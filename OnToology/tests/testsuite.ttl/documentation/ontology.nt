@@ -1,0 +1,160 @@
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/def/vtc#desiredBehaviour
+<https://w3id.org/def/vtc#desiredBehaviour> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/def/vtc#TestCaseDesign
+<https://w3id.org/def/vtc#TestCaseDesign> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://example.org/ns#Test1
+<http://example.org/ns#Test1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/ns#Test1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/vtc#TestCaseDesign> .
+<http://example.org/ns#Test1> <https://w3id.org/def/vtc#desiredBehaviour> "DigitalTwin SubClassOf hasConnection some DataServiceConnection" .
+# 
+# http://example.org/ns#Test10
+<http://example.org/ns#Test10> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/ns#Test10> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/vtc#TestCaseDesign> .
+<http://example.org/ns#Test10> <https://w3id.org/def/vtc#desiredBehaviour> "ExternalConnectionPoint SubClassOf ConnectionPoint" .
+# 
+# http://example.org/ns#Test11
+<http://example.org/ns#Test11> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/ns#Test11> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/vtc#TestCaseDesign> .
+<http://example.org/ns#Test11> <https://w3id.org/def/vtc#desiredBehaviour> "InternalConnectionPoint SubClassOf ConnectionPoint" .
+# 
+# http://example.org/ns#Test12
+<http://example.org/ns#Test12> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/ns#Test12> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/vtc#TestCaseDesign> .
+<http://example.org/ns#Test12> <https://w3id.org/def/vtc#desiredBehaviour> "DigitalEntity SubClassOf containsInteractionAffordance min 1 InteractionAffordance" .
+# 
+# http://example.org/ns#Test13
+<http://example.org/ns#Test13> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/ns#Test13> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/vtc#TestCaseDesign> .
+<http://example.org/ns#Test13> <https://w3id.org/def/vtc#desiredBehaviour> "DigitalEntity SubClassOf hasData min 1 Resource" .
+# 
+# http://example.org/ns#Test14
+<http://example.org/ns#Test14> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/ns#Test14> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/vtc#TestCaseDesign> .
+<http://example.org/ns#Test14> <https://w3id.org/def/vtc#desiredBehaviour> "DigitalTwin SubClassOf Thing" .
+# 
+# http://example.org/ns#Test15
+<http://example.org/ns#Test15> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/ns#Test15> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/vtc#TestCaseDesign> .
+<http://example.org/ns#Test15> <https://w3id.org/def/vtc#desiredBehaviour> "DigitalTwinInstance SubClassOf DigitalTwin" .
+# 
+# http://example.org/ns#Test16
+<http://example.org/ns#Test16> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/ns#Test16> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/vtc#TestCaseDesign> .
+<http://example.org/ns#Test16> <https://w3id.org/def/vtc#desiredBehaviour> "Model SubClassOf hasFormat min 1 Format" .
+# 
+# http://example.org/ns#Test17
+<http://example.org/ns#Test17> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/ns#Test17> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/vtc#TestCaseDesign> .
+<http://example.org/ns#Test17> <https://w3id.org/def/vtc#desiredBehaviour> "DigitalTwinAggregate SubClassOf aggregateDTwA some DigitalTwinAggregate" .
+# 
+# http://example.org/ns#Test18
+<http://example.org/ns#Test18> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/ns#Test18> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/vtc#TestCaseDesign> .
+<http://example.org/ns#Test18> <https://w3id.org/def/vtc#desiredBehaviour> "DigitalTwinAggregate SubClassOf aggregateDTwI some DigitalTwinInstance" .
+# 
+# http://example.org/ns#Test19
+<http://example.org/ns#Test19> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/ns#Test19> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/vtc#TestCaseDesign> .
+<http://example.org/ns#Test19> <https://w3id.org/def/vtc#desiredBehaviour> "DigitalTwinAggregate SubClassOf DigitalTwin" .
+# 
+# http://example.org/ns#Test2
+<http://example.org/ns#Test2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/ns#Test2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/vtc#TestCaseDesign> .
+<http://example.org/ns#Test2> <https://w3id.org/def/vtc#desiredBehaviour> "DigitalTwin SubClassOf hasConnection some ModelServiceConnection" .
+# 
+# http://example.org/ns#Test20
+<http://example.org/ns#Test20> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/ns#Test20> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/vtc#TestCaseDesign> .
+<http://example.org/ns#Test20> <https://w3id.org/def/vtc#desiredBehaviour> "Model SubClassOf modelAggregatedFrom some Model" .
+# 
+# http://example.org/ns#Test21
+<http://example.org/ns#Test21> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/ns#Test21> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/vtc#TestCaseDesign> .
+<http://example.org/ns#Test21> <https://w3id.org/def/vtc#desiredBehaviour> "Resource SubClassOf resourceAggregatedFrom some Resource" .
+# 
+# http://example.org/ns#Test22
+<http://example.org/ns#Test22> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/ns#Test22> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/vtc#TestCaseDesign> .
+<http://example.org/ns#Test22> <https://w3id.org/def/vtc#desiredBehaviour> "Connection SubClassOf hasConsumer min 1 ConnectionPoint" .
+# 
+# http://example.org/ns#Test23
+<http://example.org/ns#Test23> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/ns#Test23> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/vtc#TestCaseDesign> .
+<http://example.org/ns#Test23> <https://w3id.org/def/vtc#desiredBehaviour> "Connection SubClassOf hasProvider exactly 1 ConnectionPoint" .
+# 
+# http://example.org/ns#Test24
+<http://example.org/ns#Test24> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/ns#Test24> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/vtc#TestCaseDesign> .
+<http://example.org/ns#Test24> <https://w3id.org/def/vtc#desiredBehaviour> "DigitalTwin SubClassOf hasPhysicalEntity exactly 1 PhysicalEntity" .
+# 
+# http://example.org/ns#Test25
+<http://example.org/ns#Test25> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/ns#Test25> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/vtc#TestCaseDesign> .
+<http://example.org/ns#Test25> <https://w3id.org/def/vtc#desiredBehaviour> "DigitalTwin SubClassOf hasDigitalEntity min 1 DigitalEntity" .
+# 
+# http://example.org/ns#Test3
+<http://example.org/ns#Test3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/ns#Test3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/vtc#TestCaseDesign> .
+<http://example.org/ns#Test3> <https://w3id.org/def/vtc#desiredBehaviour> "DigitalTwin SubClassOf hasConnection some ModelDataConnection" .
+# 
+# http://example.org/ns#Test4
+<http://example.org/ns#Test4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/ns#Test4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/vtc#TestCaseDesign> .
+<http://example.org/ns#Test4> <https://w3id.org/def/vtc#desiredBehaviour> "DigitalTwin SubClassOf hasConnection some ModelModelConnection" .
+# 
+# http://example.org/ns#Test5
+<http://example.org/ns#Test5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/ns#Test5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/vtc#TestCaseDesign> .
+<http://example.org/ns#Test5> <https://w3id.org/def/vtc#desiredBehaviour> "DigitalEntity SubClassOf hasModel some SemanticModel" .
+# 
+# http://example.org/ns#Test6
+<http://example.org/ns#Test6> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/ns#Test6> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/vtc#TestCaseDesign> .
+<http://example.org/ns#Test6> <https://w3id.org/def/vtc#desiredBehaviour> "DigitalEntity SubClassOf hasModel some RulesModel" .
+# 
+# http://example.org/ns#Test7
+<http://example.org/ns#Test7> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/ns#Test7> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/vtc#TestCaseDesign> .
+<http://example.org/ns#Test7> <https://w3id.org/def/vtc#desiredBehaviour> "DigitalEntity SubClassOf hasModel some GeometricModel" .
+# 
+# http://example.org/ns#Test8
+<http://example.org/ns#Test8> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/ns#Test8> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/vtc#TestCaseDesign> .
+<http://example.org/ns#Test8> <https://w3id.org/def/vtc#desiredBehaviour> "DigitalEntity SubClassOf hasModel some PhysicalModel" .
+# 
+# http://example.org/ns#Test9
+<http://example.org/ns#Test9> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/ns#Test9> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/vtc#TestCaseDesign> .
+<http://example.org/ns#Test9> <https://w3id.org/def/vtc#desiredBehaviour> "DigitalEntity SubClassOf hasModel some BehavioralModel" .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
