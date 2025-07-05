@@ -16,27 +16,27 @@
 
 <https://w3id.org/def/dtw#> rdf:type owl:Ontology ;
                              owl:versionIRI <https://w3id.org/def/dtw#0.5.0> ;
-                             dc:contributor "Andrea Cimmino" ,
-                                            "María Poveda Villalón" ,
-                                            "Raúl García Castro" ,
-                                            "Socorro Bernardos" ;
+                             dc:contributor "Socorro Bernardos" ;
                              dc:creator "Salvador González Gerpe" ;
                              dc:description "Digital Twin ontology used to define Digital Twins and Semantic Digital Twins and aggregations by dimensions using Web of Things."@en ;
                              dc:license <https://creativecommons.org/licenses/by/4.0/> ;
                              dc:title "WoTDT: The WoT Digital Twin Ontology."@en ;
                              dcterms:bibliographicCitation "González-Gerpe, S., Poveda-Villalón, M., & García-Castro, R. (2024). DTAG: A Methodology for Aggregating Digital Twins Using the WoTDT Ontology. APPLIED SCIENCES-BASEL, 14(13)." ;
                              dcterms:created "2024-04-01"^^xsd:date ;
-                             dcterms:identifier "https://doi.org/10.5281/zenodo.15263156" ;
+                             dcterms:identifier <https://doi.org/10.5281/zenodo.15263156> ;
                              dcterms:issued "2024-04-01"^^xsd:date ;
-                             dcterms:license "https://creativecommons.org/licenses/by/4.0/" ;
+                             dcterms:license <https://creativecommons.org/licenses/by/4.0/> ,
+                                             <https://doi.org/10.5281/zenodo.15814921> ;
                              dcterms:modified "2025-06-15"^^xsd:date ;
                              dcterms:publisher "W3ID" ;
+                             dcterms:source <https://oeg-upm.github.io/WoT-DT-ontology-v2/OnToology/ontology.ttl/documentation/ontology.ttl> ;
                              vann:preferredNamespacePrefix "dtw" ;
                              vann:preferredNamespaceUri <https://w3id.org/def/dtw#> ;
-                             owl:backwardCompatibleWith "https://w3id.org/def/dtw#" ;
+                             owl:backwardCompatibleWith <https://w3id.org/def/dtw#> ;
                              owl:priorVersion "0.4.0" ;
                              owl:versionInfo "0.5.0" ;
-                             <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" ;
+                             <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en ,
+                                                                                        "stable" ;
                              mod:createdWith <https://chowlk.linkeddata.es/> .
 
 #################################################################
@@ -89,6 +89,10 @@ dcterms:modified rdf:type owl:AnnotationProperty .
 
 ###  http://purl.org/dc/terms/publisher
 dcterms:publisher rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/source
+dcterms:source rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/vocab/vann/preferredNamespacePrefix
@@ -390,6 +394,7 @@ dtw:resourceAggregates rdf:type owl:ObjectProperty ;
 
 ###  http://purl.org/dc/terms/description
 dcterms:description rdf:type owl:DatatypeProperty ;
+                    rdfs:domain owl:Thing ;
                     rdfs:range xsd:string ;
                     dc:description "Class has target description."@en ;
                     rdfs:comment "Class has target description."@en ;
@@ -398,6 +403,7 @@ dcterms:description rdf:type owl:DatatypeProperty ;
 
 ###  http://purl.org/dc/terms/title
 dcterms:title rdf:type owl:DatatypeProperty ;
+              rdfs:domain owl:Thing ;
               rdfs:range xsd:string ;
               dc:description "Class has target title."@en ;
               rdfs:comment "Class has target title."@en ;
@@ -414,6 +420,7 @@ dtw:hasExtension rdf:type owl:DatatypeProperty ;
 
 ###  https://www.w3.org/2019/wot/hypermedia#hasTarget
 hctl:hasTarget rdf:type owl:DatatypeProperty ;
+               rdfs:domain dtw:Format ;
                rdfs:range xsd:anyURI ;
                dc:description "Class has target uri."@en ;
                rdfs:comment "Class has target uri."@en ;
@@ -423,6 +430,7 @@ hctl:hasTarget rdf:type owl:DatatypeProperty ;
 ###  https://www.w3.org/2019/wot/td#hasForm
 td:hasForm rdf:type owl:DatatypeProperty ;
            rdfs:domain td:InteractionAffordance ;
+           rdfs:range xsd:anyURI ;
            dc:description "Interaction affordance has form."@en ;
            rdfs:comment "Interaction affordance has form."@en ;
            rdfs:label "has form"@en .
