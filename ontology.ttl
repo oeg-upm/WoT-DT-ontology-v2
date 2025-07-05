@@ -23,7 +23,6 @@
                              dc:title "WoTDT: The WoT Digital Twin Ontology."@en ;
                              dcterms:bibliographicCitation "González-Gerpe, S., Poveda-Villalón, M., & García-Castro, R. (2024). DTAG: A Methodology for Aggregating Digital Twins Using the WoTDT Ontology. APPLIED SCIENCES-BASEL, 14(13)." ;
                              dcterms:created "2024-04-01"^^xsd:date ;
-                             dcterms:identifier <https://doi.org/10.5281/zenodo.15263156> ;
                              dcterms:issued "2024-04-01"^^xsd:date ;
                              dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
                              dcterms:modified "2025-06-15"^^xsd:date ;
@@ -34,8 +33,7 @@
                              owl:backwardCompatibleWith <https://w3id.org/def/dtw#> ;
                              owl:priorVersion "0.4.0" ;
                              owl:versionInfo "0.5.0" ;
-                             <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en ,
-                                                                                        "stable" ;
+                             <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en ;
                              mod:createdWith <https://chowlk.linkeddata.es/> .
 
 #################################################################
