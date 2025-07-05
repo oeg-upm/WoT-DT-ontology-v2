@@ -1,0 +1,1217 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/def/dtw#"
+     xml:base="https://w3id.org/def/dtw"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:ns="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+     xmlns:mod="https://w3id.org/mod#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="https://w3id.org/def/dtw#">
+        <owl:versionIRI rdf:resource="https://w3id.org/def/dtw#0.5.0"/>
+        <dc:contributor>Socorro Bernardos</dc:contributor>
+        <dc:creator>Salvador González Gerpe</dc:creator>
+        <dc:description xml:lang="en">Digital Twin ontology used to define Digital Twins and Semantic Digital Twins and aggregations by dimensions using Web of Things.</dc:description>
+        <dc:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+        <dc:title xml:lang="en">WoTDT: The WoT Digital Twin Ontology.</dc:title>
+        <terms:bibliographicCitation>González-Gerpe, S., Poveda-Villalón, M., &amp; García-Castro, R. (2024). DTAG: A Methodology for Aggregating Digital Twins Using the WoTDT Ontology. APPLIED SCIENCES-BASEL, 14(13).</terms:bibliographicCitation>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-04-01</terms:created>
+        <terms:identifier rdf:resource="https://doi.org/10.5281/zenodo.15263156"/>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-04-01</terms:issued>
+        <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+        <terms:license rdf:resource="https://doi.org/10.5281/zenodo.15814921"/>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-06-15</terms:modified>
+        <terms:publisher>W3ID</terms:publisher>
+        <terms:source rdf:resource="https://oeg-upm.github.io/WoT-DT-ontology-v2/OnToology/ontology.ttl/documentation/ontology.ttl"/>
+        <vann:preferredNamespacePrefix>dtw</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri rdf:resource="https://w3id.org/def/dtw#"/>
+        <owl:backwardCompatibleWith rdf:resource="https://w3id.org/def/dtw#"/>
+        <owl:priorVersion>0.4.0</owl:priorVersion>
+        <owl:versionInfo>0.5.0</owl:versionInfo>
+        <ns:term_status xml:lang="en">stable</ns:term_status>
+        <ns:term_status>stable</ns:term_status>
+        <mod:createdWith rdf:resource="https://chowlk.linkeddata.es/"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/contributor -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/license -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/license"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/bibliographicCitation -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/bibliographicCitation"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/created -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/identifier -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/identifier"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/issued -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/publisher -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/publisher"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/source -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/source"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#comment -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#comment">
+        <rdfs:label>comment</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#backwardCompatibleWith -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#backwardCompatibleWith"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#versionInfo -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#versionInfo"/>
+    
+
+
+    <!-- http://www.w3.org/2003/06/sw-vocab-status/ns#term_status -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+    
+
+
+    <!-- https://w3id.org/mod#createdWith -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/mod#createdWith"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/def/dtw#aggregateDTwA -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/dtw#aggregateDTwA">
+        <owl:inverseOf rdf:resource="https://w3id.org/def/dtw#aggregatedDTwAFrom"/>
+        <rdfs:domain rdf:resource="https://w3id.org/def/dtw#DigitalTwinAggregate"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/dtw#DigitalTwinAggregate"/>
+        <rdfs:comment xml:lang="en">Property that describes de action of aggregation between two different entities or dtw:DigitalTwinAggregate.</rdfs:comment>
+        <rdfs:label xml:lang="en">aggregate DTwA</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/dtw#aggregateDTwI -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/dtw#aggregateDTwI">
+        <owl:inverseOf rdf:resource="https://w3id.org/def/dtw#aggregatedDTwIFrom"/>
+        <rdfs:domain rdf:resource="https://w3id.org/def/dtw#DigitalTwinAggregate"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/dtw#DigitalTwinInstance"/>
+        <rdfs:comment xml:lang="en">Property that describes de action of aggregation between two different entities or dtw:DigitalTwinInstance.</rdfs:comment>
+        <rdfs:label xml:lang="en">aggregate DTwI</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/dtw#aggregatedDTwAFrom -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/dtw#aggregatedDTwAFrom">
+        <rdfs:domain rdf:resource="https://w3id.org/def/dtw#DigitalTwinAggregate"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/dtw#DigitalTwinAggregate"/>
+        <dc:description xml:lang="en">DTwA aggregated from a specific DTwA</dc:description>
+        <rdfs:comment xml:lang="en">DTwA aggregated from a specific DTwA</rdfs:comment>
+        <rdfs:label xml:lang="en">aggregated DTwA from</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/dtw#aggregatedDTwIFrom -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/dtw#aggregatedDTwIFrom">
+        <rdfs:domain rdf:resource="https://w3id.org/def/dtw#DigitalTwinInstance"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/dtw#DigitalTwinAggregate"/>
+        <dc:description xml:lang="en">DTwI aggregated from a specific DTwA</dc:description>
+        <rdfs:comment xml:lang="en">DTwI aggregated from a specific DTwA</rdfs:comment>
+        <rdfs:label xml:lang="en">aggregated DTwI from</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/dtw#containsInteractionAffordance -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/dtw#containsInteractionAffordance">
+        <owl:inverseOf rdf:resource="https://w3id.org/def/dtw#isInteracctionAffordanceOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/def/dtw#DigitalEntity"/>
+        <rdfs:range rdf:resource="https://www.w3.org/2019/wot/td#InteractionAffordance"/>
+        <rdfs:comment xml:lang="en">Property that describes the different interaction affordances that the dt:DigitalTwinServices contains.</rdfs:comment>
+        <rdfs:label xml:lang="en">contains interaction affordance</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/dtw#hasConnection -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/dtw#hasConnection">
+        <owl:inverseOf rdf:resource="https://w3id.org/def/dtw#isConnectionOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/def/dtw#DigitalTwin"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/dtw#Connection"/>
+        <rdfs:comment xml:lang="en">Property that describes the different connections of the dtw:DigitalTwin.</rdfs:comment>
+        <rdfs:label xml:lang="en">has connection</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/dtw#hasConnectionPoint -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/dtw#hasConnectionPoint">
+        <owl:inverseOf rdf:resource="https://w3id.org/def/dtw#isConnectionPointOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/def/dtw#DigitalEntityDimension"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/dtw#ConnectionPoint"/>
+        <rdfs:comment xml:lang="en">Property that describes the connection point that the element of the DTw has to connect with others</rdfs:comment>
+        <rdfs:label xml:lang="en">has connection point</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/dtw#hasConsumer -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/dtw#hasConsumer">
+        <owl:inverseOf rdf:resource="https://w3id.org/def/dtw#isConsumerOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/def/dtw#Connection"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/dtw#ConnectionPoint"/>
+        <rdfs:comment xml:lang="en">Property that describes if the connection point is the consumer of the information.</rdfs:comment>
+        <rdfs:label xml:lang="en">has consumer</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/dtw#hasData -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/dtw#hasData">
+        <owl:inverseOf rdf:resource="https://w3id.org/def/dtw#isDataOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/def/dtw#DigitalEntity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/dcat#Resource"/>
+        <rdfs:comment xml:lang="en">Property that describes the different data that the dt:DigitalTwinData contains.</rdfs:comment>
+        <rdfs:label xml:lang="en">has data</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/dtw#hasDigitalEntity -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/dtw#hasDigitalEntity">
+        <owl:inverseOf rdf:resource="https://w3id.org/def/dtw#isDigitalEntityOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/def/dtw#DigitalTwin"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/dtw#DigitalEntity"/>
+        <rdfs:comment xml:lang="en">Property that describes the different Digital Entities that the digital twin contains.</rdfs:comment>
+        <rdfs:label xml:lang="en">has digital entity</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/dtw#hasFormat -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/dtw#hasFormat">
+        <owl:inverseOf rdf:resource="https://w3id.org/def/dtw#isFormatOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/def/dtw#Model"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/dtw#Format"/>
+        <rdfs:comment xml:lang="en">Property that describes the different extension formats that the models or data can be found.</rdfs:comment>
+        <rdfs:label xml:lang="en">has format</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/dtw#hasModel -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/dtw#hasModel">
+        <owl:inverseOf rdf:resource="https://w3id.org/def/dtw#isModelOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/def/dtw#DigitalEntity"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/dtw#Model"/>
+        <rdfs:comment xml:lang="en">Property that describes the different models that the dtw:DigitalEntity contains.</rdfs:comment>
+        <rdfs:label xml:lang="en">has model</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/dtw#hasPhysicalEntity -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/dtw#hasPhysicalEntity">
+        <owl:inverseOf rdf:resource="https://w3id.org/def/dtw#isPhysicalEntityOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/def/dtw#DigitalTwin"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/dtw#PhysicalEntity"/>
+        <rdfs:comment xml:lang="en">Property that describes the Physical Entity that the digital twin describes.</rdfs:comment>
+        <rdfs:label xml:lang="en">has physical entity</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/dtw#hasProvider -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/dtw#hasProvider">
+        <owl:inverseOf rdf:resource="https://w3id.org/def/dtw#isProviderOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/def/dtw#Connection"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/dtw#ConnectionPoint"/>
+        <rdfs:comment xml:lang="en">Property that describes if the connection point is the provider of the information.</rdfs:comment>
+        <rdfs:label xml:lang="en">has provider</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/dtw#isConnectionOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/dtw#isConnectionOf">
+        <rdfs:domain rdf:resource="https://w3id.org/def/dtw#Connection"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/dtw#DigitalTwin"/>
+        <dc:description xml:lang="en">Connection of a Digital Twin.</dc:description>
+        <rdfs:comment xml:lang="en">Connection of a Digital Twin.</rdfs:comment>
+        <rdfs:label xml:lang="en">is connection of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/dtw#isConnectionPointOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/dtw#isConnectionPointOf">
+        <rdfs:domain rdf:resource="https://w3id.org/def/dtw#ConnectionPoint"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/dtw#DigitalEntityDimension"/>
+        <dc:description xml:lang="en">Connection point is referred to a Digital Entity Dimension</dc:description>
+        <rdfs:comment xml:lang="en">Connection point is referred to a Digital Entity Dimension</rdfs:comment>
+        <rdfs:label xml:lang="en">is connection point of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/dtw#isConsumerOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/dtw#isConsumerOf">
+        <rdfs:domain rdf:resource="https://w3id.org/def/dtw#ConnectionPoint"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/dtw#Connection"/>
+        <dc:description xml:lang="en">Connection point is consumer of a connection.</dc:description>
+        <rdfs:comment xml:lang="en">Connection point is consumer of a connection.</rdfs:comment>
+        <rdfs:label xml:lang="en">is consumer of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/dtw#isDataOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/dtw#isDataOf">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Resource"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/dtw#DigitalEntity"/>
+        <dc:description xml:lang="en">Data of a Digital Entity.</dc:description>
+        <rdfs:comment xml:lang="en">Data of a Digital Entity.</rdfs:comment>
+        <rdfs:label xml:lang="en">is data of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/dtw#isDigitalEntityOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/dtw#isDigitalEntityOf">
+        <rdfs:domain rdf:resource="https://w3id.org/def/dtw#DigitalEntity"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/dtw#DigitalTwin"/>
+        <dc:description xml:lang="en">Digital entity of a Digital Twin.</dc:description>
+        <rdfs:comment xml:lang="en">Digital entity of a Digital Twin.</rdfs:comment>
+        <rdfs:label xml:lang="en">is digital entity of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/dtw#isFormatOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/dtw#isFormatOf">
+        <rdfs:domain rdf:resource="https://w3id.org/def/dtw#Format"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/dtw#Model"/>
+        <dc:description xml:lang="en">Format of a Model.</dc:description>
+        <rdfs:comment xml:lang="en">Format of a Model.</rdfs:comment>
+        <rdfs:label xml:lang="en">is format of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/dtw#isInteracctionAffordanceOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/dtw#isInteracctionAffordanceOf">
+        <rdfs:domain rdf:resource="https://www.w3.org/2019/wot/td#InteractionAffordance"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/dtw#DigitalEntity"/>
+        <dc:description xml:lang="en">Interaction Afforfance of a Digital Entity.</dc:description>
+        <rdfs:comment xml:lang="en">Interaction Afforfance of a Digital Entity.</rdfs:comment>
+        <rdfs:label xml:lang="en">is interaction affordance of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/dtw#isModelOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/dtw#isModelOf">
+        <rdfs:domain rdf:resource="https://w3id.org/def/dtw#Model"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/dtw#DigitalEntity"/>
+        <dc:description xml:lang="en">Model contained by the Digital Entity Dimension.</dc:description>
+        <rdfs:comment xml:lang="en">Model contained by the Digital Entity Dimension.</rdfs:comment>
+        <rdfs:label xml:lang="en">is model of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/dtw#isPhysicalEntityOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/dtw#isPhysicalEntityOf">
+        <rdfs:domain rdf:resource="https://w3id.org/def/dtw#PhysicalEntity"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/dtw#DigitalTwin"/>
+        <dc:description xml:lang="en">Physical entity of a Digital Twin.</dc:description>
+        <rdfs:comment xml:lang="en">Physical entity of a Digital Twin.</rdfs:comment>
+        <rdfs:label xml:lang="en">is physical entity of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/dtw#isProviderOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/dtw#isProviderOf">
+        <rdfs:domain rdf:resource="https://w3id.org/def/dtw#ConnectionPoint"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/dtw#Connection"/>
+        <dc:description xml:lang="en">Connection point is provider of a connection.</dc:description>
+        <rdfs:comment xml:lang="en">Connection point is provider of a connection.</rdfs:comment>
+        <rdfs:label xml:lang="en">is provider of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/dtw#modelAggregatedFrom -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/dtw#modelAggregatedFrom">
+        <owl:inverseOf rdf:resource="https://w3id.org/def/dtw#modelAggregates"/>
+        <rdfs:domain rdf:resource="https://w3id.org/def/dtw#Model"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/dtw#Model"/>
+        <rdfs:comment xml:lang="en">Model aggregated from model.</rdfs:comment>
+        <rdfs:label xml:lang="en">model aggregated from</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/dtw#modelAggregates -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/dtw#modelAggregates">
+        <rdfs:domain rdf:resource="https://w3id.org/def/dtw#Model"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/dtw#Model"/>
+        <dc:description xml:lang="en">Model aggregates model.</dc:description>
+        <rdfs:comment xml:lang="en">Model aggregates model.</rdfs:comment>
+        <rdfs:label xml:lang="en">model aggregates</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/dtw#resourceAggregatedFrom -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/dtw#resourceAggregatedFrom">
+        <owl:inverseOf rdf:resource="https://w3id.org/def/dtw#resourceAggregates"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Resource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/dcat#Resource"/>
+        <rdfs:comment xml:lang="en">Resource aggregated from resource.</rdfs:comment>
+        <rdfs:label xml:lang="en">resource aggregated from</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/dtw#resourceAggregates -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/dtw#resourceAggregates">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Resource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/dcat#Resource"/>
+        <dc:description xml:lang="en">Resource aggregates resource.</dc:description>
+        <rdfs:comment xml:lang="en">Resource aggregates resource.</rdfs:comment>
+        <rdfs:label xml:lang="en">resource aggregates</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/description">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <dc:description xml:lang="en">Class has target description.</dc:description>
+        <rdfs:comment xml:lang="en">Class has target description.</rdfs:comment>
+        <rdfs:label xml:lang="en">description</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/title">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <dc:description xml:lang="en">Class has target title.</dc:description>
+        <rdfs:comment xml:lang="en">Class has target title.</rdfs:comment>
+        <rdfs:label xml:lang="en">title</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/def/dtw#hasExtension -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/dtw#hasExtension">
+        <rdfs:domain rdf:resource="https://w3id.org/def/dtw#Format"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Extension of the model or data with which can be found.</rdfs:comment>
+        <rdfs:label xml:lang="en">has extension</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.w3.org/2019/wot/hypermedia#hasTarget -->
+
+
+    <owl:DatatypeProperty rdf:about="https://www.w3.org/2019/wot/hypermedia#hasTarget">
+        <rdfs:domain rdf:resource="https://w3id.org/def/dtw#Format"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <dc:description xml:lang="en">Class has target uri.</dc:description>
+        <rdfs:comment xml:lang="en">Class has target uri.</rdfs:comment>
+        <rdfs:label xml:lang="en">has target</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.w3.org/2019/wot/td#hasForm -->
+
+
+    <owl:DatatypeProperty rdf:about="https://www.w3.org/2019/wot/td#hasForm">
+        <rdfs:domain rdf:resource="https://www.w3.org/2019/wot/td#InteractionAffordance"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <dc:description xml:lang="en">Interaction affordance has form.</dc:description>
+        <rdfs:comment xml:lang="en">Interaction affordance has form.</rdfs:comment>
+        <rdfs:label xml:lang="en">has form</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.w3.org/2019/wot/td#hasUriTemplateSchema -->
+
+
+    <owl:DatatypeProperty rdf:about="https://www.w3.org/2019/wot/td#hasUriTemplateSchema">
+        <rdfs:domain rdf:resource="https://www.w3.org/2019/wot/td#InteractionAffordance"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <dc:description xml:lang="en">Interaction affordance has an URI template schema.</dc:description>
+        <rdfs:comment xml:lang="en">Interaction affordance has an URI template schema.</rdfs:comment>
+        <rdfs:label xml:lang="en">has uri template schema</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#Resource -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/dcat#Resource">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/dtw#DigitalEntityDimension"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/dtw#isDataOf"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/def/dtw#DigitalEntity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/dtw#resourceAggregatedFrom"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/ns/dcat#Resource"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/dtw#resourceAggregates"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/ns/dcat#Resource"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description xml:lang="en">Resource of data from DCAT ontology</dc:description>
+        <rdfs:comment xml:lang="en">Resource of data from DCAT ontology</rdfs:comment>
+        <rdfs:label xml:lang="en">Resource</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/dtw#BehavioralModel -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/dtw#BehavioralModel">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/dtw#Model"/>
+        <rdfs:comment xml:lang="en">Describes the behaviors and response mechanisms of the entity (e.g. state transition, performance and disturbances)</rdfs:comment>
+        <rdfs:label xml:lang="en">Behavioral Model</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/dtw#Connection -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/dtw#Connection">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/dtw#DigitalTwinDimension"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/dtw#hasConsumer"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/def/dtw#ExternalConnectionPoint"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/dtw#hasConsumer"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/def/dtw#InternalConnectionPoint"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/dtw#hasProvider"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/def/dtw#ExternalConnectionPoint"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/dtw#hasProvider"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/def/dtw#InternalConnectionPoint"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/dtw#hasConsumer"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/def/dtw#ConnectionPoint"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/dtw#hasProvider"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/def/dtw#ConnectionPoint"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Existing connection between different dtw:ConnectionPoint.</rdfs:comment>
+        <rdfs:label xml:lang="en">Connection</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/dtw#ConnectionPoint -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/dtw#ConnectionPoint">
+        <rdfs:comment xml:lang="en">Connection point of the connection.</rdfs:comment>
+        <rdfs:label xml:lang="en">Connection Point</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/dtw#DataServiceConnection -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/dtw#DataServiceConnection">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/dtw#Connection"/>
+        <rdfs:comment xml:lang="en">Connection between dcat:Resource and td:InteractionAffordance.</rdfs:comment>
+        <rdfs:label xml:lang="en">Data Service Connection</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/dtw#DigitalEntity -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/dtw#DigitalEntity">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/dtw#DigitalTwinDimension"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/dtw#hasModel"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/def/dtw#BehavioralModel"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/dtw#hasModel"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/def/dtw#GeometricModel"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/dtw#hasModel"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/def/dtw#MappingModel"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/dtw#hasModel"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/def/dtw#OntologyModel"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/dtw#hasModel"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/def/dtw#PhysicalModel"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/dtw#hasModel"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/def/dtw#RulesModel"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/dtw#hasModel"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/def/dtw#SemanticModel"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/dtw#hasModel"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/def/dtw#ShapesModel"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/dtw#containsInteractionAffordance"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://www.w3.org/2019/wot/td#InteractionAffordance"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/dtw#hasData"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.w3.org/ns/dcat#Resource"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/dtw#hasModel"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/def/dtw#Model"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">This dimension of the digital twin consists of various data models that represents all the information allocated in the digital twin.</rdfs:comment>
+        <rdfs:label xml:lang="en">Digital Entity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/dtw#DigitalEntityDimension -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/dtw#DigitalEntityDimension">
+        <dc:description xml:lang="en">Digital Entity Dimension class to add resource, model and interaction affordances clases</dc:description>
+        <rdfs:comment xml:lang="en">Digital Entity Dimension class to add resource, model and interaction affordances clases</rdfs:comment>
+        <rdfs:label xml:lang="en">Digital Entity Dimension</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/dtw#DigitalTwin -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/dtw#DigitalTwin">
+        <rdfs:subClassOf rdf:resource="https://www.w3.org/2019/wot/td#Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/dtw#hasConnection"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/def/dtw#DataServiceConnection"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/dtw#hasConnection"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/def/dtw#ModelDataConnection"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/dtw#hasConnection"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/def/dtw#ModelModelConnection"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/dtw#hasConnection"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/def/dtw#ModelServiceConnection"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/dtw#hasConnection"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/def/dtw#Connection"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/dtw#hasDigitalEntity"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/def/dtw#DigitalEntity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/dtw#hasPhysicalEntity"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/def/dtw#PhysicalEntity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A realistic representation of all product life cycle components using physical, virtual and interaction data.</rdfs:comment>
+        <rdfs:label xml:lang="en">Digital Twin</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/dtw#DigitalTwinAggregate -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/dtw#DigitalTwinAggregate">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/dtw#DigitalTwin"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/dtw#aggregateDTwA"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/def/dtw#DigitalTwinAggregate"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/dtw#aggregateDTwI"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/def/dtw#DigitalTwinInstance"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Describes the aggregation of all the DTIs. Unlike the DTI, the DTA may not be an independent data structure. It may be a computing construct that has access to all DTIs and queries them either ad-hoc or proactively.</rdfs:comment>
+        <rdfs:label xml:lang="en">Digital Twin Aggregate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/dtw#DigitalTwinDimension -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/dtw#DigitalTwinDimension">
+        <rdfs:comment xml:lang="en">Dimensions of which the digital twin is composed.</rdfs:comment>
+        <rdfs:label xml:lang="en">Digital Twin Dimension</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/dtw#DigitalTwinInstance -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/dtw#DigitalTwinInstance">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/dtw#DigitalTwin"/>
+        <rdfs:comment xml:lang="en">Describes a specific corresponding physical product that an individual Digital Twin remains linked to throughout the life of that physical product.</rdfs:comment>
+        <rdfs:label xml:lang="en">Digital Twin Instance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/dtw#ExternalConnectionPoint -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/dtw#ExternalConnectionPoint">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/dtw#ConnectionPoint"/>
+        <rdfs:comment xml:lang="en">Connection point of the connection that is external to the DTw.</rdfs:comment>
+        <rdfs:label xml:lang="en">External Connection Point</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/dtw#Format -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/dtw#Format">
+        <rdfs:comment xml:lang="en">Extension format in which the model or data is available.</rdfs:comment>
+        <rdfs:label xml:lang="en">Format</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/dtw#GeometricModel -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/dtw#GeometricModel">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/dtw#Model"/>
+        <rdfs:comment xml:lang="en">Describes all the geometric parameters of the physical entity (e.g. shapes, sizes and assembly relations).</rdfs:comment>
+        <rdfs:label xml:lang="en">Geometric Model</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/dtw#InternalConnectionPoint -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/dtw#InternalConnectionPoint">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/dtw#ConnectionPoint"/>
+        <rdfs:comment xml:lang="en">Connection point of the connection that is internal to the DTw.</rdfs:comment>
+        <rdfs:label xml:lang="en">Internal Connection Point</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/dtw#MappingModel -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/dtw#MappingModel">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/dtw#SemanticModel"/>
+        <rdfs:comment xml:lang="en">Model that allows the alignment of data with the objective of obtaining harmonised data from non-harmonised data.</rdfs:comment>
+        <rdfs:label xml:lang="en">Mapping Model</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/dtw#Model -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/dtw#Model">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/dtw#DigitalEntityDimension"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/dtw#isModelOf"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/def/dtw#DigitalEntity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/dtw#modelAggregatedFrom"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/def/dtw#Model"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/dtw#modelAggregates"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/def/dtw#Model"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/dtw#hasFormat"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/def/dtw#Format"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Representation or conceptualization of the data registered in the Virtual Entity dimension.</rdfs:comment>
+        <rdfs:label xml:lang="en">Model</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/dtw#ModelDataConnection -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/dtw#ModelDataConnection">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/dtw#Connection"/>
+        <rdfs:comment xml:lang="en">Connection between dtw:Model and dcat:Resource.</rdfs:comment>
+        <rdfs:label xml:lang="en">Model Data Connection</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/dtw#ModelModelConnection -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/dtw#ModelModelConnection">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/dtw#Connection"/>
+        <dc:description xml:lang="en">Model to model connection.</dc:description>
+        <rdfs:comment xml:lang="en">Model to model connection.</rdfs:comment>
+        <rdfs:label xml:lang="en">Model Model Connection</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/dtw#ModelServiceConnection -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/dtw#ModelServiceConnection">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/dtw#Connection"/>
+        <rdfs:comment xml:lang="en">Connection between dtw:Model and td:InteractionAffordance.</rdfs:comment>
+        <rdfs:label xml:lang="en">Model Service Connection</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/dtw#OntologyModel -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/dtw#OntologyModel">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/dtw#SemanticModel"/>
+        <rdfs:comment xml:lang="en">Model that contains the conceptualization of the information of the digital twin. This conceptualization activity refers to the organization and structuration of the information (data, knowledge, etc.), obtained during the acquisition process, into meaningful models at the knowledge level and according to the ontology requirements specification document.</rdfs:comment>
+        <rdfs:label xml:lang="en">Ontology Model</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/dtw#PhysicalEntity -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/dtw#PhysicalEntity">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/dtw#DigitalTwinDimension"/>
+        <rdfs:comment xml:lang="en">This dimension of the digital twin consists of various subsystems, objects and sensory devices. These subsystems can include dynamic systems, control systems, maintenance systems, etc., and can be combined for a specific task. Also, non physical entities can be represented.</rdfs:comment>
+        <rdfs:label xml:lang="en">Physical Entity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/dtw#PhysicalModel -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/dtw#PhysicalModel">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/dtw#Model"/>
+        <rdfs:comment xml:lang="en">Responsible for providing all the physical properties (e.g. speed and force) based on dt:GeometricModel</rdfs:comment>
+        <rdfs:label xml:lang="en">Physical Model</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/dtw#RulesModel -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/dtw#RulesModel">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/dtw#Model"/>
+        <rdfs:comment xml:lang="en">A set of rules extracted from the historical data obtained from the physical model, whose function is to provide the virtual entity with a judgment for decision making, optimization, evaluation, prediction and maintenance.</rdfs:comment>
+        <rdfs:label xml:lang="en">Rules Model</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/dtw#SemanticModel -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/dtw#SemanticModel">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/dtw#Model"/>
+        <dc:description xml:lang="en">Model representing semantic web rules or conceptualizations.</dc:description>
+        <rdfs:comment xml:lang="en">Model representing semantic web rules or conceptualizations.</rdfs:comment>
+        <rdfs:label xml:lang="en">Semantic Model</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/dtw#ShapesModel -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/dtw#ShapesModel">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/dtw#SemanticModel"/>
+        <rdfs:comment xml:lang="en">Model that contains the data validation rules allowing the data to be validated.</rdfs:comment>
+        <rdfs:label xml:lang="en">Shapes Model</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3.org/2019/wot/td#InteractionAffordance -->
+
+
+    <owl:Class rdf:about="https://www.w3.org/2019/wot/td#InteractionAffordance">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/dtw#DigitalEntityDimension"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/dtw#isInteracctionAffordanceOf"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/def/dtw#DigitalEntity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description xml:lang="en">Affordance that represents a Service.</dc:description>
+        <rdfs:comment xml:lang="en">Affordance that represents a Service.</rdfs:comment>
+        <rdfs:label xml:lang="en">Interaction Affordance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3.org/2019/wot/td#Thing -->
+
+
+    <owl:Class rdf:about="https://www.w3.org/2019/wot/td#Thing">
+        <dc:description xml:lang="en">Thing of WoT.</dc:description>
+        <rdfs:comment xml:lang="en">Thing of WoT.</rdfs:comment>
+        <rdfs:label xml:lang="en">Thing</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+
