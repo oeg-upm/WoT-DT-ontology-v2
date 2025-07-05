@@ -15,20 +15,28 @@
 @base <https://w3id.org/def/dtw#> .
 
 <https://w3id.org/def/dtw#> rdf:type owl:Ontology ;
-                             owl:imports <http://www.w3.org/ns/dcat3> ,
-                                         <https://www.w3.org/2019/wot/td> ;
+                             owl:versionIRI <https://w3id.org/def/dtw#0.5.0> ;
                              dc:contributor "Andrea Cimmino" ,
                                             "María Poveda Villalón" ,
                                             "Raúl García Castro" ,
                                             "Socorro Bernardos" ;
-                             dc:created "2024-04-01"^^xsd:date ;
                              dc:creator "Salvador González Gerpe" ;
                              dc:description "Digital Twin ontology used to define Digital Twins and Semantic Digital Twins and aggregations by dimensions using Web of Things."@en ;
                              dc:license <https://creativecommons.org/licenses/by/4.0/> ;
                              dc:title "WoTDT: The WoT Digital Twin Ontology."@en ;
+                             dcterms:bibliographicCitation "González-Gerpe, S., Poveda-Villalón, M., & García-Castro, R. (2024). DTAG: A Methodology for Aggregating Digital Twins Using the WoTDT Ontology. APPLIED SCIENCES-BASEL, 14(13)." ;
+                             dcterms:created "2024-04-01"^^xsd:date ;
+                             dcterms:identifier "https://doi.org/10.5281/zenodo.15263156" ;
+                             dcterms:issued "2024-04-01"^^xsd:date ;
+                             dcterms:license "https://creativecommons.org/licenses/by/4.0/" ;
+                             dcterms:modified "2025-06-15"^^xsd:date ;
+                             dcterms:publisher "W3ID" ;
                              vann:preferredNamespacePrefix "dtw" ;
                              vann:preferredNamespaceUri <https://w3id.org/def/dtw#> ;
+                             owl:backwardCompatibleWith "https://w3id.org/def/dtw#" ;
+                             owl:priorVersion "0.4.0" ;
                              owl:versionInfo "0.5.0" ;
+                             <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" ;
                              mod:createdWith <https://chowlk.linkeddata.es/> .
 
 #################################################################
@@ -37,10 +45,6 @@
 
 ###  http://purl.org/dc/elements/1.1/contributor
 dc:contributor rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/elements/1.1/created
-dc:created rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/elements/1.1/creator
@@ -59,6 +63,34 @@ dc:license rdf:type owl:AnnotationProperty .
 dc:title rdf:type owl:AnnotationProperty .
 
 
+###  http://purl.org/dc/terms/bibliographicCitation
+dcterms:bibliographicCitation rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/created
+dcterms:created rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/identifier
+dcterms:identifier rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/issued
+dcterms:issued rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+dcterms:license rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/modified
+dcterms:modified rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/publisher
+dcterms:publisher rdf:type owl:AnnotationProperty .
+
+
 ###  http://purl.org/vocab/vann/preferredNamespacePrefix
 vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
 
@@ -72,12 +104,28 @@ rdfs:comment rdf:type owl:AnnotationProperty ;
              rdfs:label "comment" .
 
 
+###  http://www.w3.org/2002/07/owl#backwardCompatibleWith
+owl:backwardCompatibleWith rdf:type owl:AnnotationProperty .
+
+
 ###  http://www.w3.org/2002/07/owl#versionInfo
 owl:versionInfo rdf:type owl:AnnotationProperty .
 
 
+###  http://www.w3.org/2003/06/sw-vocab-status/ns#term_status
+<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> rdf:type owl:AnnotationProperty .
+
+
 ###  https://w3id.org/mod#createdWith
 mod:createdWith rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
 
 
 #################################################################
@@ -345,7 +393,7 @@ dcterms:description rdf:type owl:DatatypeProperty ;
                     rdfs:range xsd:string ;
                     dc:description "Class has target description."@en ;
                     rdfs:comment "Class has target description."@en ;
-                    rdfs:label "description" .
+                    rdfs:label "description"@en .
 
 
 ###  http://purl.org/dc/terms/title
@@ -353,7 +401,7 @@ dcterms:title rdf:type owl:DatatypeProperty ;
               rdfs:range xsd:string ;
               dc:description "Class has target title."@en ;
               rdfs:comment "Class has target title."@en ;
-              rdfs:label "title" .
+              rdfs:label "title"@en .
 
 
 ###  https://w3id.org/def/dtw#hasExtension
@@ -410,14 +458,14 @@ dcat:Resource rdf:type owl:Class ;
                               ] ;
               dc:description "Resource of data from DCAT ontology"@en ;
               rdfs:comment "Resource of data from DCAT ontology"@en ;
-              rdfs:label "Resource" .
+              rdfs:label "Resource"@en .
 
 
 ###  https://w3id.org/def/dtw#BehavioralModel
 dtw:BehavioralModel rdf:type owl:Class ;
                     rdfs:subClassOf dtw:Model ;
                     rdfs:comment "Describes the behaviors and response mechanisms of the entity (e.g. state transition, performance and disturbances)"@en ;
-                    rdfs:label "Behavioral Model" .
+                    rdfs:label "Behavioral Model"@en .
 
 
 ###  https://w3id.org/def/dtw#Connection
@@ -450,20 +498,20 @@ dtw:Connection rdf:type owl:Class ;
                                  owl:onClass dtw:ConnectionPoint
                                ] ;
                rdfs:comment "Existing connection between different dtw:ConnectionPoint."@en ;
-               rdfs:label "Connection" .
+               rdfs:label "Connection"@en .
 
 
 ###  https://w3id.org/def/dtw#ConnectionPoint
 dtw:ConnectionPoint rdf:type owl:Class ;
                     rdfs:comment "Connection point of the connection."@en ;
-                    rdfs:label "Connection Point" .
+                    rdfs:label "Connection Point"@en .
 
 
 ###  https://w3id.org/def/dtw#DataServiceConnection
 dtw:DataServiceConnection rdf:type owl:Class ;
                           rdfs:subClassOf dtw:Connection ;
                           rdfs:comment "Connection between dcat:Resource and td:InteractionAffordance."@en ;
-                          rdfs:label "Data Service Connection" .
+                          rdfs:label "Data Service Connection"@en .
 
 
 ###  https://w3id.org/def/dtw#DigitalEntity
@@ -517,7 +565,7 @@ dtw:DigitalEntity rdf:type owl:Class ;
                                     owl:onClass dtw:Model
                                   ] ;
                   rdfs:comment "This dimension of the digital twin consists of various data models that represents all the information allocated in the digital twin."@en ;
-                  rdfs:label "Digital Entity" .
+                  rdfs:label "Digital Entity"@en .
 
 
 ###  https://w3id.org/def/dtw#DigitalEntityDimension
@@ -562,7 +610,7 @@ dtw:DigitalTwin rdf:type owl:Class ;
                                   owl:onClass dtw:PhysicalEntity
                                 ] ;
                 rdfs:comment "A realistic representation of all product life cycle components using physical, virtual and interaction data."@en ;
-                rdfs:label "Digital Twin" .
+                rdfs:label "Digital Twin"@en .
 
 
 ###  https://w3id.org/def/dtw#DigitalTwinAggregate
@@ -577,54 +625,54 @@ dtw:DigitalTwinAggregate rdf:type owl:Class ;
                                            owl:someValuesFrom dtw:DigitalTwinInstance
                                          ] ;
                          rdfs:comment "Describes the aggregation of all the DTIs. Unlike the DTI, the DTA may not be an independent data structure. It may be a computing construct that has access to all DTIs and queries them either ad-hoc or proactively."@en ;
-                         rdfs:label "Digital Twin Aggregate" .
+                         rdfs:label "Digital Twin Aggregate"@en .
 
 
 ###  https://w3id.org/def/dtw#DigitalTwinDimension
 dtw:DigitalTwinDimension rdf:type owl:Class ;
                          rdfs:comment "Dimensions of which the digital twin is composed."@en ;
-                         rdfs:label "Digital Twin Dimension" .
+                         rdfs:label "Digital Twin Dimension"@en .
 
 
 ###  https://w3id.org/def/dtw#DigitalTwinInstance
 dtw:DigitalTwinInstance rdf:type owl:Class ;
                         rdfs:subClassOf dtw:DigitalTwin ;
                         rdfs:comment "Describes a specific corresponding physical product that an individual Digital Twin remains linked to throughout the life of that physical product."@en ;
-                        rdfs:label "Digital Twin Instance" .
+                        rdfs:label "Digital Twin Instance"@en .
 
 
 ###  https://w3id.org/def/dtw#ExternalConnectionPoint
 dtw:ExternalConnectionPoint rdf:type owl:Class ;
                             rdfs:subClassOf dtw:ConnectionPoint ;
                             rdfs:comment "Connection point of the connection that is external to the DTw."@en ;
-                            rdfs:label "External Connection Point" .
+                            rdfs:label "External Connection Point"@en .
 
 
 ###  https://w3id.org/def/dtw#Format
 dtw:Format rdf:type owl:Class ;
            rdfs:comment "Extension format in which the model or data is available."@en ;
-           rdfs:label "Format" .
+           rdfs:label "Format"@en .
 
 
 ###  https://w3id.org/def/dtw#GeometricModel
 dtw:GeometricModel rdf:type owl:Class ;
                    rdfs:subClassOf dtw:Model ;
                    rdfs:comment "Describes all the geometric parameters of the physical entity (e.g. shapes, sizes and assembly relations)."@en ;
-                   rdfs:label "Geometric Model" .
+                   rdfs:label "Geometric Model"@en .
 
 
 ###  https://w3id.org/def/dtw#InternalConnectionPoint
 dtw:InternalConnectionPoint rdf:type owl:Class ;
                             rdfs:subClassOf dtw:ConnectionPoint ;
                             rdfs:comment "Connection point of the connection that is internal to the DTw."@en ;
-                            rdfs:label "Internal Connection Point" .
+                            rdfs:label "Internal Connection Point"@en .
 
 
 ###  https://w3id.org/def/dtw#MappingModel
 dtw:MappingModel rdf:type owl:Class ;
                  rdfs:subClassOf dtw:SemanticModel ;
                  rdfs:comment "Model that allows the alignment of data with the objective of obtaining harmonised data from non-harmonised data."@en ;
-                 rdfs:label "Mapping Model" .
+                 rdfs:label "Mapping Model"@en .
 
 
 ###  https://w3id.org/def/dtw#Model
@@ -648,14 +696,14 @@ dtw:Model rdf:type owl:Class ;
                             owl:onClass dtw:Format
                           ] ;
           rdfs:comment "Representation or conceptualization of the data registered in the Virtual Entity dimension."@en ;
-          rdfs:label "Model" .
+          rdfs:label "Model"@en .
 
 
 ###  https://w3id.org/def/dtw#ModelDataConnection
 dtw:ModelDataConnection rdf:type owl:Class ;
                         rdfs:subClassOf dtw:Connection ;
                         rdfs:comment "Connection between dtw:Model and dcat:Resource."@en ;
-                        rdfs:label "Model Data Connection" .
+                        rdfs:label "Model Data Connection"@en .
 
 
 ###  https://w3id.org/def/dtw#ModelModelConnection
@@ -663,42 +711,42 @@ dtw:ModelModelConnection rdf:type owl:Class ;
                          rdfs:subClassOf dtw:Connection ;
                          dc:description "Model to model connection."@en ;
                          rdfs:comment "Model to model connection."@en ;
-                         rdfs:label "Model Model Connection" .
+                         rdfs:label "Model Model Connection"@en .
 
 
 ###  https://w3id.org/def/dtw#ModelServiceConnection
 dtw:ModelServiceConnection rdf:type owl:Class ;
                            rdfs:subClassOf dtw:Connection ;
                            rdfs:comment "Connection between dtw:Model and td:InteractionAffordance."@en ;
-                           rdfs:label "Model Service Connection" .
+                           rdfs:label "Model Service Connection"@en .
 
 
 ###  https://w3id.org/def/dtw#OntologyModel
 dtw:OntologyModel rdf:type owl:Class ;
                   rdfs:subClassOf dtw:SemanticModel ;
                   rdfs:comment "Model that contains the conceptualization of the information of the digital twin. This conceptualization activity refers to the organization and structuration of the information (data, knowledge, etc.), obtained during the acquisition process, into meaningful models at the knowledge level and according to the ontology requirements specification document."@en ;
-                  rdfs:label "Ontology Model" .
+                  rdfs:label "Ontology Model"@en .
 
 
 ###  https://w3id.org/def/dtw#PhysicalEntity
 dtw:PhysicalEntity rdf:type owl:Class ;
                    rdfs:subClassOf dtw:DigitalTwinDimension ;
                    rdfs:comment "This dimension of the digital twin consists of various subsystems, objects and sensory devices. These subsystems can include dynamic systems, control systems, maintenance systems, etc., and can be combined for a specific task. Also, non physical entities can be represented."@en ;
-                   rdfs:label "Physical Entity" .
+                   rdfs:label "Physical Entity"@en .
 
 
 ###  https://w3id.org/def/dtw#PhysicalModel
 dtw:PhysicalModel rdf:type owl:Class ;
                   rdfs:subClassOf dtw:Model ;
                   rdfs:comment "Responsible for providing all the physical properties (e.g. speed and force) based on dt:GeometricModel"@en ;
-                  rdfs:label "Physical Model" .
+                  rdfs:label "Physical Model"@en .
 
 
 ###  https://w3id.org/def/dtw#RulesModel
 dtw:RulesModel rdf:type owl:Class ;
                rdfs:subClassOf dtw:Model ;
                rdfs:comment "A set of rules extracted from the historical data obtained from the physical model, whose function is to provide the virtual entity with a judgment for decision making, optimization, evaluation, prediction and maintenance."@en ;
-               rdfs:label "Rules Model" .
+               rdfs:label "Rules Model"@en .
 
 
 ###  https://w3id.org/def/dtw#SemanticModel
@@ -706,14 +754,14 @@ dtw:SemanticModel rdf:type owl:Class ;
                   rdfs:subClassOf dtw:Model ;
                   dc:description "Model representing semantic web rules or conceptualizations."@en ;
                   rdfs:comment "Model representing semantic web rules or conceptualizations."@en ;
-                  rdfs:label "Semantic Model" .
+                  rdfs:label "Semantic Model"@en .
 
 
 ###  https://w3id.org/def/dtw#ShapesModel
 dtw:ShapesModel rdf:type owl:Class ;
                 rdfs:subClassOf dtw:SemanticModel ;
                 rdfs:comment "Model that contains the data validation rules allowing the data to be validated."@en ;
-                rdfs:label "Shapes Model" .
+                rdfs:label "Shapes Model"@en .
 
 
 ###  https://www.w3.org/2019/wot/td#InteractionAffordance
@@ -725,14 +773,14 @@ td:InteractionAffordance rdf:type owl:Class ;
                                          ] ;
                          dc:description "Affordance that represents a Service."@en ;
                          rdfs:comment "Affordance that represents a Service."@en ;
-                         rdfs:label "Interaction Affordance" .
+                         rdfs:label "Interaction Affordance"@en .
 
 
 ###  https://www.w3.org/2019/wot/td#Thing
 td:Thing rdf:type owl:Class ;
          dc:description "Thing of WoT."@en ;
          rdfs:comment "Thing of WoT."@en ;
-         rdfs:label "Thing" .
+         rdfs:label "Thing"@en .
 
 
 ###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
