@@ -19,6 +19,7 @@
                              dc:contributor "Socorro Bernardos" ;
                              dc:creator "Salvador González Gerpe" ;
                              dc:description "Digital Twin ontology used to define Digital Twins and Semantic Digital Twins and aggregations by dimensions using Web of Things."@en ;
+                             dc:identifier <https://doi.org/10.5281/zenodo.15263156> ;
                              dc:license <https://creativecommons.org/licenses/by/4.0/> ;
                              dc:title "WoTDT: The WoT Digital Twin Ontology."@en ;
                              dcterms:bibliographicCitation "González-Gerpe, S., Poveda-Villalón, M., & García-Castro, R. (2024). DTAG: A Methodology for Aggregating Digital Twins Using the WoTDT Ontology. APPLIED SCIENCES-BASEL, 14(13)." ;
@@ -52,6 +53,10 @@ dc:creator rdf:type owl:AnnotationProperty .
 
 ###  http://purl.org/dc/elements/1.1/description
 dc:description rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/identifier
+dc:identifier rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/elements/1.1/license
