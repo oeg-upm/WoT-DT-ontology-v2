@@ -25,8 +25,7 @@
                              dcterms:created "2024-04-01"^^xsd:date ;
                              dcterms:identifier <https://doi.org/10.5281/zenodo.15263156> ;
                              dcterms:issued "2024-04-01"^^xsd:date ;
-                             dcterms:license <https://creativecommons.org/licenses/by/4.0/> ,
-                                             <https://doi.org/10.5281/zenodo.15814921> ;
+                             dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
                              dcterms:modified "2025-06-15"^^xsd:date ;
                              dcterms:publisher "W3ID" ;
                              dcterms:source <https://oeg-upm.github.io/WoT-DT-ontology-v2/OnToology/ontology.ttl/documentation/ontology.ttl> ;
