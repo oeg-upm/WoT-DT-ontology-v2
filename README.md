@@ -65,11 +65,10 @@ It is recommended to use the `dtw` prefix for the namespace.
 If you use this ontology in your work, please cite its authors.
 
 ```bibtex
-@misc{wotdt,
+@inproceedings{wotdt,
   author = {Salvador González Gerpe and Andrea Cimmino and María Poveda Villalón and Raúl García Castro and Socorro Bernardos},
-  title = {WoTDT: The WoT Digital Twin Ontology},
-  year = {2023},
-  version = {0.5.0},
-  url = {https://w3id.org/def/dtw#}
+  title = {WoTDT: an Extension of the WoT Thing Description Ontology for Digital Twins in the Construction Domain},
+  url = {https://ceur-ws.org/Vol-3824/paper11.pdf},
+  note = {WoTDT ontology available at https://w3id.org/def/dtw\#}
 }
 ```
